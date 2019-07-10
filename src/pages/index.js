@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import "../styles/main.sass"
@@ -42,7 +43,66 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="home-body">
-        <div>Hello</div>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-3">
+              <div className="body-title">Camp Options</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-sm-2">
+              <div className="camp-option-text">Web</div>
+              <div className="camp-option-paragraph">
+                We provide a fun learning enviornmnent for our students while
+                creating experiences mthat are engaging and provide meaningful
+                value.
+              </div>
+              <div className="learn-more-link">
+                <Link to="/courses/">Learn More</Link>
+              </div>
+            </div>
+            <div className="col-xs-12 col-sm-2">
+              <div className="camp-option-text">App</div>
+              <div className="camp-option-paragraph">
+                We provide a fun learning enviornmnent for our students while
+                creating experiences mthat are engaging and provide meaningful
+                value. We provide a fun learning enviornmnent for our students
+                while creating experiences mthat are engaging and provide
+                meaningful value.
+              </div>
+              <div className="learn-more-link">
+                <Link to="/courses/">Learn More</Link>
+              </div>
+            </div>
+            <div className="col-xs-8 col-sm-2">
+              <div className="camp-option-text">VR</div>
+              <div className="camp-option-paragraph">
+                We provide a fun learning enviornmnent for our students while
+                creating experiences mthat are engaging and provide meaningful
+                value.
+              </div>
+              <div className="learn-more-link">
+                <Link to="/courses/">Learn More</Link>
+              </div>
+            </div>
+          </div>
+          <div className="row end-xs">
+            <div className="col-sm-3">
+              <div className="white-square">
+                <div className="row">
+                  <div className="col-xs-6">
+                    <div className="body-title-wrap">Future Facing</div>
+                    <div className="camp-option-paragraph">
+                      We provide a fun learning enviornmnent for our students
+                      while creating experiences mthat are engaging and provide
+                      meaningful value.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </Layout>
