@@ -86,11 +86,13 @@ const IndexPage = () => (
               </div>
             </div>
           </div>
+          <div className="blue-square-1"></div>
           <div className="row end-xs">
             <div className="col-sm-3">
               <div className="white-square">
-                <div className="row">
+                <div className="row center-xs">
                   <div className="col-xs-6">
+                    <div className="body-blue-text">Benefit</div>
                     <div className="body-title-wrap">Future Facing</div>
                     <div className="camp-option-paragraph">
                       We provide a fun learning enviornmnent for our students
@@ -98,6 +100,44 @@ const IndexPage = () => (
                       meaningful value.
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="our-vision">
+            <div className="row">
+              <div className="col-xs-6">
+                <div className="body-title">Our Vision</div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-8">
+                <div className="our-vision-quote">
+                  "Happiness is not something you postpone for the future; it is
+                  something you design for the present."
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 col-sm-2">
+                <div className="camp-option-paragraph">
+                  We provide a fun learning enviornmnent for our students while
+                  creating experiences mthat are engaging and provide meaningful
+                  value.
+                </div>
+              </div>
+              <div className="col-xs-12 col-sm-2">
+                <div className="camp-option-paragraph">
+                  We provide a fun learning enviornmnent for our students while
+                  creating experiences mthat are engaging and provide meaningful
+                  value.
+                </div>
+              </div>
+              <div className="col-xs-8 col-sm-2">
+                <div className="camp-option-paragraph">
+                  We provide a fun learning enviornmnent for our students while
+                  creating experiences mthat are engaging and provide meaningful
+                  value.
                 </div>
               </div>
             </div>

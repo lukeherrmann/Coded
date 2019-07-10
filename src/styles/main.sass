@@ -7,7 +7,7 @@ $base: 16px
 body
   font-family: $font
 
-$blue: #162fbd
+$blue: #2b91bf
 $turquoise: #3ad7c1
 
 $list1: $blue, $turquoise
@@ -92,6 +92,11 @@ $list1: $blue, $turquoise
   font-size: 2.5rem
   word-spacing: 100vw
 
+.body-blue-text
+  color: #2b91bf
+  font-weight: bold
+  padding-bottom: 15px
+
 .camp-option-text
   color: #4b4f52
   font-size: 1.5625rem
@@ -107,12 +112,29 @@ $list1: $blue, $turquoise
 .learn-more-link
   padding-top: 20px
 
+.blue-square-1
+  @include footer-gradient(left, $list1)
+  margin-top: 100px
+  object-fit: contain
+  width: 457px
+  height: 400px
+  
 .white-square
   display: flex
   align-items: center
   background: #f7f5f4
   height: 800px
   width: 433px
+
+.our-vision
+  padding-top: 70px
+
+.our-vision-quote
+  color: #4b4f52
+  font-size: 2.1875rem
+  font-weight: bold
+  padding-top: 20px
+  padding-bottom: 20px
 
 
 
