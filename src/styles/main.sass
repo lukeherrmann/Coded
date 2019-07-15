@@ -12,6 +12,28 @@ $turquoise: #3ad7c1
 
 $list1: $blue, $turquoise
 
+@import 'grid'
+
+.section
+  position: relative
+  padding-top: 200px
+  padding-bottom: 100px
+
+.camp-options
+  padding-top: 50px
+  padding-bottom: 150px
+
+.photo-section-1
+  position: relative
+
+.photo-section-2
+  position: relative
+
+.photo-1
+  margin-top: -35rem
+  position: absolute
+  right: 0
+
 @mixin footer-gradient($direction, $list)
   background: linear-gradient($direction, $list)
 
@@ -51,7 +73,7 @@ $list1: $blue, $turquoise
   height: 5000px
   padding-top: 200px
 
-.new-campers
+.gradient-sq-top
   @include footer-gradient(left, $list1)
   height: 650px
 
@@ -59,16 +81,16 @@ $list1: $blue, $turquoise
   padding-top: 70px
   padding-bottom: 70px
   
-.camper-sm-text
+.header-med-white
   font-size: 1.125rem
   color: #fffbfa
   padding-top: 15px
 
-.camper-lg-text
+.header-xl-white
   font-size: 6.25rem
   color: #fffbfa
 
-.enroll-btn
+.btn-med-white
   display: flex
   justify-content: center
   align-items: center
@@ -76,75 +98,114 @@ $list1: $blue, $turquoise
   height: 50px
   background-color: #fffbfa
 
-.enroll-text
+.btn-blue-sm
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 11.875rem
+  height: 3.125rem
+  background-color: #37cbc1
+
+.btn-text-blue
   font-size: 1.5rem
   color: #2b91bf
   font-weight: bold
 
-.body-title
+.btn-text-white
+  font-size: 1.5rem
+  color: #fffbfa
+  font-weight: bold
+
+.header-lg-black
   color: #4b4f52
   font-weight: bold
   font-size: 2.5rem
 
-.body-title-wrap
+.header-lg-black-wrap
   color: #4b4f52
   font-weight: bold
   font-size: 2.5rem
   word-spacing: 100vw
 
-.body-blue-text
-  color: #2b91bf
-  font-weight: bold
-  padding-bottom: 15px
-
-.camp-option-text
+.header-med-black
   color: #4b4f52
   font-size: 1.5625rem
   font-weight: bold
-  padding-top: 20px
-  padding-bottom: 20px
 
-.camp-option-paragraph
+.body-blue-text
+  color: #2b91bf
+  font-weight: bold
+
+.p-black
   color: #4b4f52
   size: 1.0625
-  padding-top: 15px
+ 
 
-.learn-more-link
+.link-blue
   padding-top: 20px
 
 .blue-square-1
+  position: absolute
+  top: 0
+  left: 0
+  margin-top: -5rem
   @include footer-gradient(left, $list1)
-  margin-top: 100px
-  object-fit: contain
-  width: 457px
-  height: 400px
+  width: 22rem
+  height: 20rem
+  z-index: 1
   
-.white-square
-  display: flex
-  align-items: center
+.blue-square-2
+  position: absolute
+  top: 0
+  right: 0
+  margin-top: -5rem
+  @include footer-gradient(right, $list1)
+  width: 22rem
+  height: 20rem
+  z-index: 1
+  
+.gray-sq-right
+  position: absolute
+  top: 0
+  left: 50%
   background: #f7f5f4
-  height: 800px
-  width: 433px
+  height: 99.7%
+  width: 50%
+  z-index: 1
 
-.our-vision
-  padding-top: 70px
+.gray-sq-left
+  position: absolute
+  top: 0
+  right: 50%
+  background: #f7f5f4
+  height: 99.7%
+  width: 50%
+  z-index: 1
 
-.our-vision-quote
+.container
+  position: relative
+  z-index: 2
+
+
+.header-med
   color: #4b4f52
   font-size: 2.1875rem
   font-weight: bold
   padding-top: 20px
   padding-bottom: 20px
 
-.testimonial-quote
-  color: #4b4f52
-  font-size: 2.1875rem
-  font-weight: bold
+
+.padding-50-50
+  padding-top: 50px
+  padding-bottom: 50px
+
+.padding-20-20
   padding-top: 20px
   padding-bottom: 20px
 
-.find-camp-title
-  padding-top: 100px
+.padding-15-15
+  padding-top: 15px
+  padding-bottom: 15px
 
 .parent-or-business
   width: 440px
@@ -153,6 +214,6 @@ $list1: $blue, $turquoise
 
 
 
-@import 'grid'
+
 
 
