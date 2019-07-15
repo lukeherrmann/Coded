@@ -9,6 +9,11 @@ import home3 from "../images/home_3.png"
 
 const IndexPage = () => (
   <Layout>
+    <div className="line-1" />
+    <div className="line-2" />
+    <div className="line-3" />
+    <div className="line-4" />
+    <div className="line-5" />
     <div className="gradient-sq-top">
       <div className="container">
         <div className="camper-text-container">
@@ -294,23 +299,41 @@ const IndexPage = () => (
         <div className="row center-xs">
           <div className="col">
             <div className="header-lg-black">
-              <h2>Find A Camp</h2>
+              <div className="padding-20-20">
+                <h2>Find A Camp</h2>
+              </div>
             </div>
           </div>
         </div>
         <div className="row center-xs">
           <div className="col">
             <div className="p-black">
-              <p>Are you a parent or a business?</p>
+                <p>Are you a parent or a business?</p>
             </div>
           </div>
         </div>
-        <div className="row around-xs">
-          <div className="col-xs-12 col-sm-6">
-            <div className="parent-or-business">I'm a parent</div>
-          </div>
-          <div className="col-xs-12 col-sm-6">
-            <div className="parent-or-business">I have a business</div>
+        <div className="padding-50-50">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6">
+              <div className="box-shadow">
+                <div className="box-shadow-text">
+                  <div className="padding-15-15">
+                    <p className="p-black">I'm a</p>
+                  </div>
+                  <h2 className="header-lg-black">Parent</h2>
+                </div>
+              </div>
+            </div>
+            <div className="col-xs-12 col-sm-6">
+              <div className="box-shadow">
+                <div className="box-shadow-text">
+                  <div className="padding-15-15">
+                    <p className="p-black">I have a</p>
+                  </div>
+                  <h2 className="header-lg-black">Business</h2>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
