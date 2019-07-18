@@ -4,10 +4,10 @@ import Layout from "../components/layout"
 import "../styles/main.sass"
 
 
-const SignUp = () => (
+const ParentSignUp = () => (
   <Layout>
-    <h1> This is the Sign Up page!</h1>
+    <h1> This is the Parent Sign Up page!</h1>
   </Layout>
 )
 
-export default SignUp
+export default ParentSignUp

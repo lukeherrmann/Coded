@@ -8,7 +8,7 @@ const Header = () => (
     <div className="container">
       <div className="row middle-sm">
         <div className="col-xs-6 col-sm-9">
-            <Link className="link" to="/">
+            <Link to="/">
               <img src={codedLogo} />
             </Link>
         </div>

@@ -11,6 +11,13 @@ import App from "../images/app.png"
 import VR from "../images/vr.png"
 import Vision from "../images/vision.png"
 import Testimonials from "../images/testimonials.png"
+import Microsoft from "../images/microsoft.png"
+import Jazz from "../images/jazz.png"
+import Utah from "../images/Utah.png"
+import Fuze from "../images/fuze.png"
+import Stars from "../images/Stars.png"
+import Bees from "../images/bees.png"
+import firstStar from "../images/firstStar.png"
 
 const IndexPage = () => (
   <Layout>
@@ -354,6 +361,7 @@ const IndexPage = () => (
           <div className="padding-50-50">
             <div className="row between-sm">
               <div className="col-xs-12 col-md-5">
+              <Link to="/parentsignup">
                 <div className="box-shadow">
                   <div className="box-shadow-text">
                     <div className="padding-15-15">
@@ -362,18 +370,53 @@ const IndexPage = () => (
                     <h2 className="header-lg-black">Parent</h2>
                   </div>
                 </div>
+                </Link>
               </div>
               <div className="col-xs-12 col-md-5">
-                <div className="box-shadow">
-                  <div className="box-shadow-text">
-                    <div className="padding-15-15">
-                      <p className="p-black">I have a</p>
+                <Link to="/parentsignup">
+                  <div className="box-shadow">
+                    <div className="box-shadow-text">
+                      <div className="padding-15-15">
+                        <p className="p-black">I have a</p>
+                      </div>
+                      <h2 className="header-lg-black">Business</h2>
                     </div>
-                    <h2 className="header-lg-black">Business</h2>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="gray-partner-container">
+      <div className="container">
+        <div className="row center-xs">
+          <div className="padding-20-20">
+            <h2 className="header-lg-gray">Our Partners</h2>
+          </div>
+        </div>
+        <div className="row between-xs">
+          <div className="col-md-1">
+            <img src={Microsoft} />
+          </div>
+          <div className="col-md-1">
+            <img src={Jazz} />
+          </div>
+          <div className="col-md-1">
+            <img src={Utah} />
+          </div>
+          <div className="col-md-1">
+            <img src={Fuze} />
+          </div>
+          <div className="col-md-1">
+            <img src={Stars} />
+          </div>
+          <div className="col-md-1">
+            <img src={Bees} />
+          </div>
+          <div className="col-md-1">
+            <img src={firstStar} />
           </div>
         </div>
       </div>
