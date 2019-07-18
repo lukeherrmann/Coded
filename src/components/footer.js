@@ -2,13 +2,17 @@ import React from "react"
 import { Link } from "gatsby"
 import FooterForm from "./footerform"
 
+import logoWhite from "../images/codedWhite.png" 
+
 const Footer = () => (
   <div className="footer-container">
     <div className="section-footer">
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-2">
-            <div className="header-sm-white-footer">Coded</div>
+            <div className="header-sm-white-footer">
+              <img src={logoWhite} />
+            </div>
           </div>
           <div className="col-xs-12 col-sm-offset-2 col-sm-2">
             <h5 className="header-sm-white-footer">CAMPS</h5>

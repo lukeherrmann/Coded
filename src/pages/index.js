@@ -6,6 +6,11 @@ import "../styles/main.sass"
 import home1 from "../images/home_1.png"
 import home2 from "../images/home_2.png"
 import home3 from "../images/home_3.png"
+import Web from "../images/web.png"
+import App from "../images/app.png"
+import VR from "../images/vr.png"
+import Vision from "../images/vision.png"
+import Testimonials from "../images/testimonials.png"
 
 const IndexPage = () => (
   <Layout>
@@ -76,38 +81,21 @@ const IndexPage = () => (
     </div>
 
     <div className="body-main">
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-3">
-            <div className="line-gray" />
-          </div>
-          <div className="col-xs-3">
-            <div className="line-gray" />
-          </div>
-          <div className="col-xs-3">
-            <div className="line-gray" />
-          </div>
-          <div className="col-xs-3">
-            <div className="line-gray" />
-          </div>
-          <div className="row end-xs">
-            <div className="col-xs-12">
-              <div className="line-gray" />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="section">
         <div className="camp-options">
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-3">
-                <div className="header-lg-black">Camp Options</div>
+                <div className="padding-20-20">
+                  <div className="header-lg-black">Camp Options</div>
+                </div>
               </div>
             </div>
             <div className="row">
               <div className="col-xs-12 col-sm-2">
+                <div className="padding-15-15">
+                  <img src={Web} />
+                </div>
                 <div className="padding-15-15">
                   <div className="header-med-black">Web</div>
                 </div>
@@ -124,6 +112,9 @@ const IndexPage = () => (
               </div>
               <div className="col-xs-12 col-sm-offset-1 col-sm-2">
                 <div className="padding-15-15">
+                  <img src={App} />
+                </div>
+                <div className="padding-15-15">
                   <div className="header-med-black">App</div>
                 </div>
                 <div className="p-black">
@@ -138,6 +129,9 @@ const IndexPage = () => (
                 </div>
               </div>
               <div className="col-xs-8 col-sm-offset-1 col-sm-2">
+                <div className="padding-15-15">
+                  <img src={VR} />
+                </div>
                 <div className="padding-15-15">
                   <div className="header-med-black">VR</div>
                 </div>
@@ -187,8 +181,11 @@ const IndexPage = () => (
       <div className="section">
         <div className="container">
           <div className="our-vision">
-            <div className="row">
-              <div className="col-xs-6">
+            <div className="row middle-sm">
+              <div className="col-xs-1">
+                <img src={Vision} />
+              </div>
+              <div className="col-xs-2">
                 <div className="header-lg-black">
                   <h2>Our Vision</h2>
                 </div>
@@ -282,8 +279,11 @@ const IndexPage = () => (
       <div className="section">
         <div className="container">
           <div className="testimonials">
-            <div className="row">
-              <div className="col-sm">
+            <div className="row middle-sm">
+              <div className="col-sm-1">
+                <img src={Testimonials} />
+              </div>
+              <div className="col-sm-2">
                 <div className="header-lg-black">
                   <h2>Testimonials</h2>
                 </div>

@@ -1,16 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import codedLogo from "../images/codedLogo.png"
+
 const Header = () => (
   <div className="header-container">
     <div className="container">
-      <div className="row">
+      <div className="row middle-sm">
         <div className="col-xs-6 col-sm-9">
-          <div className="headerTitle">
             <Link className="link" to="/">
-              Coded
+              <img src={codedLogo} />
             </Link>
-          </div>
         </div>
         <div className="col-xs-3 col-sm-2">
           <Link className="link" to="/courses/">
