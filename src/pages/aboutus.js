@@ -3,13 +3,13 @@ import React from "react"
 
 import Layout from "../components/layout"
 import "../styles/main.sass"
-import home1 from "../images/home_1.png"
-import home2 from "../images/home_2.png"
-import home3 from "../images/home_3.png"
+import headerImage from "../images/headerimage.png"
+import aboutUs1 from "../images/aboutus1.png"
+import aboutUs2 from "../images/aboutus2.png"
 
 const AboutUs = () => (
   <Layout>
-    <img src={home1} />
+    <img src={headerImage} className="aboutus-image-header" />
     <div className="container">
       <div className="row">
         <div className="col-xs-3">
@@ -43,7 +43,7 @@ const AboutUs = () => (
         <div className="row middle-xs">
           <div className="col-sm-9">
             <div className="blue-square-left-about" />
-            <img src={home2} className="filler-photo" />
+            <img src={aboutUs1} className="filler-photo" />
           </div>
           <div className="col-sm-3">
             <div className="padding-50-50">
@@ -74,9 +74,13 @@ const AboutUs = () => (
             </p>
           </div>
           <div className="col-sm-9">
-            <div className="row end-sm">
-              <div className="blue-square-right-about" />
-              <img src={home2} className="filler-photo-2" />
+            <div className="row">
+              <div className="col-sm-offset-1 col-sm-11">
+                <img src={aboutUs2} className="filler-photo-2" />
+              </div>
+              <div className="col-sm-offset-8">
+                <div className="blue-square-right-about" />
+              </div>
             </div>
           </div>
         </div>

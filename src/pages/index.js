@@ -361,19 +361,19 @@ const IndexPage = () => (
           <div className="padding-50-50">
             <div className="row between-sm">
               <div className="col-xs-12 col-md-5">
-              <Link to="/parentsignup">
-                <div className="box-shadow">
-                  <div className="box-shadow-text">
-                    <div className="padding-15-15">
-                      <p className="p-black">I'm a</p>
+                <Link to="/parentsignup" state={{ form: "parents"}}>
+                  <div className="box-shadow">
+                    <div className="box-shadow-text">
+                      <div className="padding-15-15">
+                        <p className="p-black">I'm a</p>
+                      </div>
+                      <h2 className="header-lg-black">Parent</h2>
                     </div>
-                    <h2 className="header-lg-black">Parent</h2>
                   </div>
-                </div>
                 </Link>
               </div>
               <div className="col-xs-12 col-md-5">
-                <Link to="/parentsignup">
+                <Link to="/parentsignup" state={{ form: "business"}}>
                   <div className="box-shadow">
                     <div className="box-shadow-text">
                       <div className="padding-15-15">
