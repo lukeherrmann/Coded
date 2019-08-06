@@ -76,7 +76,7 @@ const IndexPage = () => (
         </div>
         <div className="row">
           <div className="col-xs-12 col-sm-4">
-            <div className="btn-med-white">
+            <div className="btn-sm-white">
               <div className="btn-text-blue">Enroll</div>
             </div>
           </div>

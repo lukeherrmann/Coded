@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <div>
-        <div class="lines">
+        <div className="lines">
           <div className="container">
             <div className="line-grey" />
             <div className="line-grey" />

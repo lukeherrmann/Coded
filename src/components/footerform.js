@@ -9,7 +9,6 @@ class FooterForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    
   }
   render() {
     const { email } = this.state
@@ -17,12 +16,15 @@ class FooterForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
+          className="footer-form"
           name="email"
           placeholder="Your Email"
           value={email}
           onChange={this.handleChange}
         />
-        <button type="submit">Subscribe</button>
+        <div className="btn-med-white">
+          <div className="btn-text-blue-sm">Subscribe</div>
+        </div>
       </form>
     )
   }

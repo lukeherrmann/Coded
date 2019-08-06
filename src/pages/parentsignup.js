@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import IconRadio from "../components/iconradio"
 import Forms from "../components/forms"
 import BusinessForms from "../components/businessforms"
@@ -9,16 +10,38 @@ import vrIcon from "../images/vr.png"
 import "../styles/main.sass"
 
 class ParentSignUp extends React.Component {
-  state = { parent: "" }
+  state = { parent: true, pageHeader: "" }
+
   componentDidMount() {
     if (this.props.location.state.form === "parents")
-      this.setState({ parent: true })
+      this.setState({ parent: true, pageHeader: "Parent" })
     else if (this.props.location.state.form === "business")
-      this.setState({ parent: false })
-    else this.setState({ parent: true })
+      this.setState({ parent: false, pageHeader: "Business" })
+    else this.setState({ parent: true, pageHeader: "Parent" })
+  }
+  static defaultProps = {
+    data: [],
+  }
+
+  handleClick = () => {
+    if (this.state.parent === true)
+      this.setState({ parent: false, pageHeader: "Business" })
+    else if (this.state.parent === false)
+      this.setState({ parent: true, pageHeader: "Parent" })
   }
 
   render() {
+    const {
+      data: {
+        allPrismicAboutCourse: {
+          nodes: [
+            {
+              data: { course_description, course_title },
+            },
+          ],
+        },
+      },
+    } = this.props
     return (
       <Layout>
         <div className="sign-up">
@@ -26,8 +49,16 @@ class ParentSignUp extends React.Component {
             <div className="row">
               <div className="col-sm-offset-1 col-sm-5">
                 <div className="padding-50-50">
-                  <h1 className="header-lg-black">Sign Up</h1>
+                  <h1 className="header-lg-black">
+                    Sign Up - {this.state.pageHeader}
+                  </h1>
+                  <div className="padding-top-15">
+                    <p onClick={this.handleClick} className="i-black">
+                      Not a {this.state.pageHeader}? Click Here!
+                    </p>
+                  </div>
                 </div>
+
                 <div className="padding-20-20">
                   <p className="p-black"> Select Camps of Interest</p>
                 </div>
@@ -51,13 +82,7 @@ class ParentSignUp extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <p className="p-black">
-                      In our we camp, we provide high quality coding experiences
-                      forout campers. Many of these are powered ny Lenovo
-                      ThinkPads that students can continue to work throughout
-                      the camp. We fully cover designing web an web based apps
-                      from start to finish.
-                    </p>
+                    <p className="p-black">{course_description.text}</p>
                   </div>
                   <div className="padding-35-35">
                     <div className="padding-20-20">
@@ -72,13 +97,7 @@ class ParentSignUp extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <p className="p-black">
-                      In our we camp, we provide high quality coding experiences
-                      forout campers. Many of these are powered ny Lenovo
-                      ThinkPads that students can continue to work throughout
-                      the camp. We fully cover designing web an web based apps
-                      from start to finish.
-                    </p>
+                    <p className="p-black">{course_description.text}</p>
                   </div>
                   <div className="padding-35-35">
                     <div className="padding-20-20">
@@ -93,13 +112,7 @@ class ParentSignUp extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <p className="p-black">
-                      In our we camp, we provide high quality coding experiences
-                      forout campers. Many of these are powered ny Lenovo
-                      ThinkPads that students can continue to work throughout
-                      the camp. We fully cover designing web an web based apps
-                      from start to finish.
-                    </p>
+                    <p className="p-black">{course_description.text}</p>
                   </div>
                 </div>
               </div>
@@ -110,5 +123,21 @@ class ParentSignUp extends React.Component {
     )
   }
 }
-
 export default ParentSignUp
+
+export const pageQuery = graphql`
+  query {
+    allPrismicAboutCourse {
+      nodes {
+        data {
+          course_description {
+            text
+          }
+          course_title {
+            text
+          }
+        }
+      }
+    }
+  }
+`
