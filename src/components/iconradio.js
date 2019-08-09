@@ -4,7 +4,7 @@ import appIcon from "../images/appGrey.png"
 import vrIcon from "../images/vrGrey.png"
 
 class IconRadio extends React.Component {
-  state = { selectedOption: "app" }
+  state = { selectedOption: "" }
 
   handleChange = changeEvent => {
     this.setState({ selectedOption: changeEvent.target.value })

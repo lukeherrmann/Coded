@@ -11,7 +11,7 @@ class AboutUs extends React.Component {
   render() {
     const {
       data: {
-        prismicHome: {
+        prismicAboutus: {
           data: {
             main_title,
             subtitle_1,
@@ -24,7 +24,7 @@ class AboutUs extends React.Component {
     } = this.props
     return (
       <Layout>
-        <img src={headerImage} className="aboutus-image-header" />
+        <img src={headerImage} alt="header-image" className="aboutus-image-header" />
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-4">
@@ -37,15 +37,13 @@ class AboutUs extends React.Component {
             <div className="row middle-xs">
               <div className="col-sm-9">
                 <div className="blue-square-left-about" />
-                <img src={aboutUs1} className="filler-photo" />
+                <img src={aboutUs1} alt="body-image-1" className="filler-photo" />
               </div>
               <div className="col-sm-3">
                 <div className="padding-50-50">
                   <h1 className="header-lg-black-about">{subtitle_1.text}</h1>
                 </div>
-                <p className="p-black">
-                  {description_1.text}
-                </p>
+                <p className="p-black">{description_1.text}</p>
               </div>
             </div>
           </div>
@@ -57,14 +55,12 @@ class AboutUs extends React.Component {
                 <div className="padding-50-50">
                   <h1 className="header-lg-black-about">{subtitle_2.text}</h1>
                 </div>
-                <p className="p-black">
-                {description_2.text}
-                </p>
+                <p className="p-black">{description_2.text}</p>
               </div>
               <div className="col-sm-9">
                 <div className="row">
                   <div className="col-sm-offset-1 col-sm-11">
-                    <img src={aboutUs2} className="filler-photo-2" />
+                    <img src={aboutUs2} alt="body-image-2" className="filler-photo-2" />
                   </div>
                   <div className="col-sm-offset-8">
                     <div className="blue-square-right-about" />
@@ -83,7 +79,7 @@ export default AboutUs
 
 export const pageQuery = graphql`
   query AboutUs {
-    prismicHome {
+    prismicAboutus {
       data {
         main_title {
           text

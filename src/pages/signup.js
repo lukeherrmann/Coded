@@ -10,18 +10,7 @@ import vrIcon from "../images/vr.png"
 import "../styles/main.sass"
 
 class ParentSignUp extends React.Component {
-  state = { parent: true, pageHeader: "" }
-
-  componentDidMount() {
-    if (this.props.location.state.form === "parents")
-      this.setState({ parent: true, pageHeader: "Parent" })
-    else if (this.props.location.state.form === "business")
-      this.setState({ parent: false, pageHeader: "Business" })
-    else this.setState({ parent: true, pageHeader: "Parent" })
-  }
-  static defaultProps = {
-    data: [],
-  }
+  state = { parent: true, pageHeader: "Parent" }
 
   handleClick = () => {
     if (this.state.parent === true)
@@ -47,7 +36,7 @@ class ParentSignUp extends React.Component {
         <div className="sign-up">
           <div className="container">
             <div className="row">
-              <div className="col-sm-offset-1 col-sm-5">
+              <div className="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-5">
                 <div className="padding-50-50">
                   <h1 className="header-lg-black">
                     Sign Up - {this.state.pageHeader}
@@ -67,14 +56,14 @@ class ParentSignUp extends React.Component {
                 </div>
                 {this.state.parent ? <Forms /> : <BusinessForms />}
               </div>
-              <div className="col-sm-offset-1 col-sm-4">
+              <div className=" col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-4">
                 <div className="padding-top-top">
                   <div className="padding-35-35">
                     <div className="padding-20-20">
                       <div className="row">
                         <div className="col-sm">
                           <div className="row-center">
-                            <img src={webIcon} />
+                            <img src={webIcon} alt="web-icon" />
                             <div className="padding-top-20">
                               <h1 className="header-lg-black">Web</h1>
                             </div>
@@ -89,7 +78,7 @@ class ParentSignUp extends React.Component {
                       <div className="row">
                         <div className="col-sm">
                           <div className="row-center">
-                            <img src={appIcon} />
+                            <img src={appIcon} alt="app-icon" />
                             <div className="padding-top-20">
                               <h1 className="header-lg-black">App</h1>
                             </div>
@@ -104,7 +93,7 @@ class ParentSignUp extends React.Component {
                       <div className="row">
                         <div className="col-sm">
                           <div className="row-center">
-                            <img src={vrIcon} />
+                            <img src={vrIcon} alt="vr-icon" />
                             <div className="padding-top-20">
                               <h1 className="header-lg-black">VR</h1>
                             </div>

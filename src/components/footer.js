@@ -14,7 +14,9 @@ const Footer = () => (
         <div className="row">
           <div className="col-xs-12 col-sm-2">
             <div className="header-sm-white-footer">
-              <img src={logoWhite} />
+              <Link to="/">
+                <img src={logoWhite} alt="logo-white" />
+              </Link>
             </div>
           </div>
           <div className="col-xs-12 col-sm-offset-2 col-sm-2">

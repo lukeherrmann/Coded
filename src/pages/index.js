@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import "../styles/main.sass"
@@ -19,409 +19,439 @@ import Stars from "../images/Stars.png"
 import Bees from "../images/bees.png"
 import firstStar from "../images/firstStar.png"
 
-const IndexPage = () => (
-  <Layout>
-    <div className="gradient-sq-top">
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-3">
-            <div className="line-white" />
-          </div>
-          <div className="col-xs-3">
-            <div className="line-white" />
-          </div>
-          <div className="col-xs-3">
-            <div className="line-white" />
-          </div>
-          <div className="col-xs-3">
-            <div className="line-white" />
-          </div>
-          <div className="row end-xs">
-            <div className="col-xs-12">
-              <div className="line-white" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="camper-text-container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-2">
-              <div className="header-med-white">
-                <h3>NOW ACCEPTING</h3>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-12 col-sm-4">
-              <div className="header-xl-white">
-                <h1>New Campers</h1>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-12 col-sm-4">
-              <div className="header-med-white">
-                <p>Creative Techology Camp</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-12 col-sm-4">
-              <div className="header-med-white">
-                <p>Classes in apps, web, and VR</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-12 col-sm-4">
-            <div className="btn-sm-white">
-              <div className="btn-text-blue">Enroll</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="photo-1">
-      <img src={home1} />
-    </div>
-
-    <div className="body-main">
-      <div className="section">
-        <div className="camp-options">
+class Index extends React.Component {
+  render() {
+    const {
+      data: {
+        prismicHomepage: {
+          data: {
+            course_1,
+            course_description_1,
+            course_title_2,
+            course_description_2,
+            course_title_3,
+            course_description_3,
+            mini_title_pic_right,
+            pic_title_right,
+            pic_right_desc,
+            section_2_title,
+            main_quote_1,
+            sec_2_subquote_1,
+            sec_2_subquote_2,
+            sec_2_subquote_3,
+            mini_title_pic_left,
+            pic_title_left,
+            pic_left_desc,
+            section_3_title,
+            main_testimonial,
+            testimonial_1,
+            testimonial_2,
+            testimonial_3,
+          },
+        },
+      },
+    } = this.props
+    return (
+      <Layout>
+        <div className="gradient-sq-top">
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-3">
-                <div className="padding-20-20">
-                  <div className="header-lg-black">Camp Options</div>
+              <div className="col-xs-3">
+                <div className="line-white" />
+              </div>
+              <div className="col-xs-3">
+                <div className="line-white" />
+              </div>
+              <div className="col-xs-3">
+                <div className="line-white" />
+              </div>
+              <div className="col-xs-3">
+                <div className="line-white" />
+              </div>
+              <div className="row end-xs">
+                <div className="col-xs-12">
+                  <div className="line-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="camper-text-container">
+              <div className="row">
+                <div className="col-xs-12 col-sm-2">
+                  <h3 className="header-med-white">NOW ACCEPTING</h3>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-12 col-sm-4">
+                  <h1 className="header-xl-white">New Campers</h1>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-12 col-sm-4">
+                  <p className="header-med-white">Creative Techology Camp</p>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-12 col-sm-4">
+                  <p className="header-med-white">
+                    Classes in apps, web, and VR
+                  </p>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-xs-12 col-sm-2">
-                <div className="padding-15-15">
-                  <img src={Web} />
-                </div>
-                <div className="padding-15-15">
-                  <div className="header-med-black">Web</div>
-                </div>
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
-                </div>
-                <div className="link-blue">
-                  <Link to="/courses/">Learn More</Link>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-offset-1 col-sm-2">
-                <div className="padding-15-15">
-                  <img src={App} />
-                </div>
-                <div className="padding-15-15">
-                  <div className="header-med-black">App</div>
-                </div>
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
-                </div>
-                <div className="link-blue">
-                  <Link to="/courses/">Learn More</Link>
-                </div>
-              </div>
-              <div className="col-xs-8 col-sm-offset-1 col-sm-2">
-                <div className="padding-15-15">
-                  <img src={VR} />
-                </div>
-                <div className="padding-15-15">
-                  <div className="header-med-black">VR</div>
-                </div>
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
-                </div>
-                <div className="link-blue">
-                  <Link to="/courses/">Learn More</Link>
+              <div className="col-xs-12 col-sm-4">
+                <div className="btn-sm-white">
+                  <Link to="/signup/">
+                    <h2 className="btn-text-blue">Enroll</h2>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="photo-section-1">
-        <div className="blue-square-1" />
-        <div className="gray-sq-right" />
-        <div className="container">
-          <div className="row middle-sm">
-            <div className="col-xs-12 col-sm-10">
-              <img src={home2} className="img-2" />
-            </div>
-            <div className="col-xs-12 col-sm-2">
-              <div className="body-blue-text">
-                <h6>Benefit</h6>
-              </div>
-              <div className="padding-20-20">
-                <div className="header-lg-black-wrap">
-                  <h1>Future Facing</h1>
-                </div>
-              </div>
-              <div className="p-black">
-                <p>
-                  We provide a fun learning enviornmnent for our students while
-                  creating experiences mthat are engaging and provide meaningful
-                  value.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="photo-1">
+          <img src={home1} alt="header-image-home" />
         </div>
-      </div>
-      <div className="section">
-        <div className="container">
-          <div className="our-vision">
-            <div className="row middle-sm">
-              <div className="col-xs-1">
-                <img src={Vision} />
-              </div>
-              <div className="col-xs-2">
-                <div className="header-lg-black">
-                  <h2>Our Vision</h2>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-8">
-                <div className="header-med-black">
-                  <div className="padding-50-50">
-                    <h2>
-                      "Happiness is not something you postpone for the future;
-                      it is something you design for the present."
-                    </h2>
+        <div className="body-main">
+          <div className="section">
+            <div className="camp-options">
+              <div className="container">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-3">
+                    <div className="padding-20-20">
+                      <h1 className="header-lg-black">Camp Options</h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-2">
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-offset-1 col-sm-2">
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
-                </div>
-              </div>
-              <div className="col-xs-8 col-sm-offset-1 col-sm-2">
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-2">
-                <div className="padding-50-50">
-                  <div className="btn-blue-sm">
-                    <div className="btn-text-white">
-                      <h5>Our Story</h5>
+                <div className="row">
+                  <div className="col-xs-12 col-sm-2">
+                    <div className="padding-15-15">
+                      <img src={Web} alt="web-icon" />
+                    </div>
+                    <div className="padding-15-15">
+                      <h3 className="header-med-black">{course_1.text}</h3>
+                    </div>
+                    <p className="p-black">{course_description_1.text}</p>
+                    <div className="link-blue">
+                      <Link to="/courses/">Learn More</Link>
+                    </div>
+                  </div>
+                  <div className="col-xs-12 col-sm-offset-1 col-sm-2">
+                    <div className="padding-15-15">
+                      <img src={App} alt="app-icon" />
+                    </div>
+                    <div className="padding-15-15">
+                      <h3 className="header-med-black">
+                        {course_title_2.text}
+                      </h3>
+                    </div>
+                    <p className="p-black">{course_description_2.text}</p>
+                    <div className="link-blue">
+                      <Link to="/courses/">Learn More</Link>
+                    </div>
+                  </div>
+                  <div className="col-xs-8 col-sm-offset-1 col-sm-2">
+                    <div className="padding-15-15">
+                      <img src={VR} alt="vr-icon" />
+                    </div>
+                    <div className="padding-15-15">
+                      <h3 className="header-med-black">
+                        {course_title_3.text}
+                      </h3>
+                    </div>
+                    <p className="p-black">{course_description_3.text}</p>
+                    <div className="link-blue">
+                      <Link to="/courses/">Learn More</Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="photo-section-2">
-        <div className="blue-square-2" />
-        <div className="gray-sq-left" />
-        <div className="container">
-          <div className="row middle-xs">
-            <div className="col-xs-12 col-sm-2">
-              <div className="body-blue-text">
-                <h6>Benefit</h6>
-              </div>
-              <div className="padding-20-20">
-                <div className="header-lg-black-wrap">
-                  <h1>Future Facing</h1>
+          <div className="photo-section-1">
+            <div className="blue-square-1" />
+            <div className="gray-sq-right" />
+            <div className="container">
+              <div className="row middle-sm">
+                <div className="col-xs-12 col-sm-10">
+                  <img src={home2} alt="home-body-image-1" className="img-2" />
+                </div>
+                <div className="col-xs-12 col-sm-2">
+                  <h6 className="body-blue-text">
+                    {mini_title_pic_right.text}
+                  </h6>
+                  <div className="padding-20-20">
+                    <h1 className="header-lg-black-wrap">
+                      {pic_title_right.text}
+                    </h1>
+                  </div>
+                  <p className="p-black">{pic_right_desc.text}</p>
                 </div>
               </div>
-              <div className="p-black">
-                <p>
-                  We provide a fun learning enviornmnent for our students while
-                  creating experiences mthat are engaging and provide meaningful
-                  value.
-                </p>
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-offset-1 col-sm-9">
-              <img src={home3} />
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="section">
-        <div className="container">
-          <div className="testimonials">
-            <div className="row middle-sm">
-              <div className="col-sm-1">
-                <img src={Testimonials} />
-              </div>
-              <div className="col-sm-2">
-                <div className="header-lg-black">
-                  <h2>Testimonials</h2>
+          <div className="section">
+            <div className="container">
+              <div className="our-vision">
+                <div className="row middle-sm">
+                  <div className="col-xs-1">
+                    <img src={Vision} alt="vision-icon" />
+                  </div>
+                  <div className="col-xs-2">
+                    <h2 className="header-lg-black">{section_2_title.text}</h2>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-6 col-sm-7">
-                <div className="header-med-black">
-                  <div className="padding-50-50">
-                    <h2>
-                      "Happiness is not something you postpone for the future;
-                      it is something you design for the present."
-                    </h2>
+                <div className="row">
+                  <div className="col-xs-12 col-sm-8">
+                    <div className="padding-50-50">
+                      <h2 className="header-med-black">{main_quote_1.text}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-xs-12 col-sm-2">
+                    <p className="p-black">{sec_2_subquote_1.text}</p>
+                  </div>
+                  <div className="col-xs-12 col-sm-offset-1 col-sm-2">
+                    <p className="p-black">{sec_2_subquote_2.text}</p>
+                  </div>
+                  <div className="col-xs-8 col-sm-offset-1 col-sm-2">
+                    <p className="p-black">{sec_2_subquote_3.text}</p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-sm-2">
+                    <div className="padding-50-50">
+                      <Link to="/aboutus/">
+                        <div className="btn-blue-sm">
+                          <h5 className="btn-text-white">Our Story</h5>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-2">
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
+          </div>
+          <div className="photo-section-2">
+            <div className="blue-square-2" />
+            <div className="gray-sq-left" />
+            <div className="container">
+              <div className="row middle-xs">
+                <div className="col-xs-12 col-sm-2">
+                  <h6 className="body-blue-text">{mini_title_pic_left.text}</h6>
+
+                  <div className="padding-20-20">
+                    <h1 className="header-lg-black-wrap">
+                      {pic_title_left.text}
+                    </h1>
+                  </div>
+                  <p className="p-black">{pic_left_desc.text}</p>
                 </div>
-              </div>
-              <div className="col-xs-12 col-sm-offset-1 col-sm-2">
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-offset-1 col-sm-2">
-                <div className="p-black">
-                  <p>
-                    We provide a fun learning enviornmnent for our students
-                    while creating experiences mthat are engaging and provide
-                    meaningful value.
-                  </p>
+                <div className="col-xs-12 col-sm-offset-1 col-sm-9">
+                  <img src={home3} alt="home-body-image-2" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="section">
-        <div className="container">
-          <div className="row center-xs">
-            <div className="col">
-              <div className="header-lg-black">
-                <div className="padding-20-20">
-                  <h2>Find A Camp</h2>
+
+          <div className="section">
+            <div className="container">
+              <div className="testimonials">
+                <div className="row middle-sm">
+                  <div className="col-sm-1">
+                    <img src={Testimonials} alt="testimonial-icon" />
+                  </div>
+                  <div className="col-sm-2">
+                    <div className="header-lg-black">
+                      <h2>{section_3_title.text}</h2>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="row center-xs">
-            <div className="col">
-              <div className="p-black">
-                <p>Are you a parent or a business?</p>
-              </div>
-            </div>
-          </div>
-          <div className="padding-50-50">
-            <div className="row between-sm">
-              <div className="col-xs-12 col-md-5">
-                <Link to="/parentsignup" state={{ form: "parents"}}>
-                  <div className="box-shadow">
-                    <div className="box-shadow-text">
-                      <div className="padding-15-15">
-                        <p className="p-black">I'm a</p>
+                <div className="row">
+                  <div className="col-xxs-8 col-md-7">
+                    <div className="header-med-black">
+                      <div className="padding-50-50">
+                        <h2>"{main_testimonial.text}"</h2>
                       </div>
-                      <h2 className="header-lg-black">Parent</h2>
                     </div>
                   </div>
-                </Link>
+                </div>
+                <div className="row">
+                  <div className="col-xs-12 col-md-3">
+                    <div className="testimonial-quotes">
+                      <p className="p-black">"{testimonial_1.text}"</p>
+                    </div>
+                  </div>
+                  <div className="col-xs-12 col-md-3">
+                    <div className="">
+                      <p className="p-black">"{testimonial_2.text}"</p>
+                    </div>
+                  </div>
+                  <div className="col-xs-12  col-md-3">
+                    <div className="">
+                      <p className="p-black">"{testimonial_3.text}"</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="col-xs-12 col-md-5">
-                <Link to="/parentsignup" state={{ form: "business"}}>
-                  <div className="box-shadow">
-                    <div className="box-shadow-text">
-                      <div className="padding-15-15">
-                        <p className="p-black">I have a</p>
+            </div>
+          </div>
+          <div className="section">
+            <div className="container">
+              <div className="row center-xs">
+                <div className="padding-20-20">
+                  <h2 className="header-lg-black">Find A Camp</h2>
+                </div>
+              </div>
+              <div className="row center-xs">
+                <div className="p-black">
+                  <p>Are you a parent or a business?</p>
+                </div>
+              </div>
+              <div className="padding-50-50">
+                <div className="row between-sm">
+                  <div className="col-xs-12 col-md-5">
+                    <Link to="/signup" state={{ form: "parents" }}>
+                      <div className="box-shadow">
+                        <div className="box-shadow-text">
+                          <div className="padding-15-15">
+                            <p className="p-black">I'm a</p>
+                          </div>
+                          <h2 className="header-lg-black">Parent</h2>
+                        </div>
                       </div>
-                      <h2 className="header-lg-black">Business</h2>
-                    </div>
+                    </Link>
                   </div>
-                </Link>
+                  <div className="col-xs-12 col-md-5">
+                    <Link to="/signup" state={{ form: "business" }}>
+                      <div className="box-shadow">
+                        <div className="box-shadow-text">
+                          <div className="padding-15-15">
+                            <p className="p-black">I have a</p>
+                          </div>
+                          <h2 className="header-lg-black">Business</h2>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div className="gray-partner-container">
-      <div className="container">
-        <div className="row center-xs">
-          <div className="padding-20-20">
-            <h2 className="header-lg-gray">Our Partners</h2>
+        <div className="gray-partner-container">
+          <div className="container">
+            <div className="row center-xs">
+              <div className="padding-20-20">
+                <h2 className="header-lg-gray">Our Partners</h2>
+              </div>
+            </div>
+            <div className="row between-xs">
+              <div className="col-md-1">
+                <img src={Microsoft} alt="microsoft" />
+              </div>
+              <div className="col-md-1">
+                <img src={Jazz} alt="jazz" />
+              </div>
+              <div className="col-md-1">
+                <img src={Utah} alt="utah" />
+              </div>
+              <div className="col-md-1">
+                <img src={Fuze} alt="fuze" />
+              </div>
+              <div className="col-md-1">
+                <img src={Stars} alt="stars" />
+              </div>
+              <div className="col-md-1">
+                <img src={Bees} alt="bees" />
+              </div>
+              <div className="col-md-1">
+                <img src={firstStar} alt="firststar" />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="row between-xs">
-          <div className="col-md-1">
-            <img src={Microsoft} />
-          </div>
-          <div className="col-md-1">
-            <img src={Jazz} />
-          </div>
-          <div className="col-md-1">
-            <img src={Utah} />
-          </div>
-          <div className="col-md-1">
-            <img src={Fuze} />
-          </div>
-          <div className="col-md-1">
-            <img src={Stars} />
-          </div>
-          <div className="col-md-1">
-            <img src={Bees} />
-          </div>
-          <div className="col-md-1">
-            <img src={firstStar} />
-          </div>
-        </div>
-      </div>
-    </div>
-  </Layout>
-)
+      </Layout>
+    )
+  }
+}
 
-export default IndexPage
+export default Index
+
+export const query = graphql`
+  query HomePage {
+    prismicHomepage {
+      data {
+        course_1 {
+          text
+        }
+        course_description_1 {
+          text
+        }
+        course_title_2 {
+          text
+        }
+        course_description_2 {
+          text
+        }
+        course_title_3 {
+          text
+        }
+        course_description_3 {
+          text
+        }
+        mini_title_pic_right {
+          text
+        }
+        pic_title_right {
+          text
+        }
+        pic_right_desc {
+          text
+        }
+        section_2_title {
+          text
+        }
+        main_quote_1 {
+          text
+        }
+        sec_2_subquote_1 {
+          text
+        }
+        sec_2_subquote_2 {
+          text
+        }
+        sec_2_subquote_3 {
+          text
+        }
+        mini_title_pic_left {
+          text
+        }
+        pic_title_left {
+          text
+        }
+        pic_left_desc {
+          text
+        }
+        section_3_title {
+          text
+        }
+        main_testimonial {
+          text
+        }
+        testimonial_1 {
+          text
+        }
+        testimonial_2 {
+          text
+        }
+        testimonial_3 {
+          text
+        }
+      }
+    }
+  }
+`
