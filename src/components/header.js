@@ -1,28 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 
-import "../components/styles.sass"
+import codedLogo from "../images/codedLogo.png"
 
 const Header = () => (
-  <div className="headerContainer">
-    <div
-      style={{
-        margin: ``,
-        padding: `1rem 4rem`,
-      }}
-    >
-      <h1 className="headerTitle">Coded</h1>
+  <div className="header-container">
+    <div className="container">
+      <div className="row middle-sm">
+        <div className="col-xs-6 col-sm-9">
+            <Link to="/">
+              <img src={codedLogo} />
+            </Link>
+        </div>
+        <div className="col-xs-3 col-sm-2">
+          <Link className="link" to="/courses/">
+            Learn About Our Courses
+          </Link>
+        </div>
+        <div className="col-xs-3 col-sm-1">
+          <div className="header-item">
+            <Link className="link" to="/aboutus/">
+              About Us
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
