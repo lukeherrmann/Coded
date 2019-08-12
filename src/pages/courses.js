@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import "../styles/main.sass"
@@ -56,11 +56,13 @@ const Courses = () => (
               </div>
               <h4 className="header-sm-black">August 2018</h4>
               <div className="padding-35-35">
-                <div className="btn-blue-sm">
-                  <div className="btn-text-white">
-                    <h5>Sign Up</h5>
+                <Link to="/signup/">
+                  <div className="btn-blue-sm">
+                    <div className="btn-text-white">
+                      <h5>Sign Up</h5>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
             <div className="col-sm-offset-3 col-sm-5">

@@ -126,7 +126,7 @@ class Index extends React.Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-xs-12 col-sm-2">
+                  <div className="col-xxs-offset-2 col-xxs-6 col-sm-2">
                     <div className="padding-15-15">
                       <img src={Web} alt="web-icon" />
                     </div>
@@ -138,7 +138,7 @@ class Index extends React.Component {
                       <Link to="/courses/">Learn More</Link>
                     </div>
                   </div>
-                  <div className="col-xs-12 col-sm-offset-1 col-sm-2">
+                  <div className="col-xxs-offset-2 col-xxs-6 col-sm-offset-1 col-sm-2">
                     <div className="padding-15-15">
                       <img src={App} alt="app-icon" />
                     </div>
@@ -152,7 +152,7 @@ class Index extends React.Component {
                       <Link to="/courses/">Learn More</Link>
                     </div>
                   </div>
-                  <div className="col-xs-8 col-sm-offset-1 col-sm-2">
+                  <div className="col-xxs-offset-2 col-xxs-6 col-sm-offset-1 col-sm-2">
                     <div className="padding-15-15">
                       <img src={VR} alt="vr-icon" />
                     </div>
