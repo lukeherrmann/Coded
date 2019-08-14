@@ -9,7 +9,7 @@ import appIcon from "../images/app.png"
 import vrIcon from "../images/vr.png"
 import "../styles/main.sass"
 
-class ParentSignUp extends React.Component {
+class SignUp extends React.Component {
   state = { parent: true, pageHeader: "Parent" }
 
   handleClick = () => {
@@ -112,7 +112,7 @@ class ParentSignUp extends React.Component {
     )
   }
 }
-export default ParentSignUp
+export default SignUp
 
 export const pageQuery = graphql`
   query {
