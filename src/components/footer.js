@@ -9,7 +9,7 @@ import Twitter from "../images/twitter.png"
 
 const Footer = () => (
   <div className="footer-container">
-    <div className="section-footer">
+    <div className="section">
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-2">
@@ -21,7 +21,7 @@ const Footer = () => (
           </div>
           <div className="col-xs-12 col-sm-offset-2 col-sm-2">
             <h5 className="header-sm-white-footer">CAMPS</h5>
-            <ul>
+            <ul className="footer-list">
               <Link to="/courses">
                 <li className="list-item-sm-white">Web Design</li>
               </Link>
@@ -35,7 +35,7 @@ const Footer = () => (
           </div>
           <div className="col-xs-12 col-sm-offset-1 col-sm-2">
             <h5 className="header-sm-white-footer">RESOURCES</h5>
-            <ul>
+            <ul className="footer-list">
               <li className="list-item-sm-white">Teaching Materials</li>
               <li className="list-item-sm-white">Interactive Websites</li>
               <li className="list-item-sm-white">Swift Playgrounds</li>
@@ -44,7 +44,7 @@ const Footer = () => (
           </div>
           <div className="col-xs-12 col-sm-offset-1 col-sm-2">
             <h5 className="header-sm-white-footer">COMPANY</h5>
-            <ul>
+            <ul className="footer-list">
               <Link to="/faq/">
                 <li className="list-item-sm-white">FAQ</li>
               </Link>

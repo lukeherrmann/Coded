@@ -351,25 +351,25 @@ class Index extends React.Component {
             </div>
             <div className="row between-xs">
               <div className="col-md-1">
-                <img src={Microsoft} alt="microsoft" />
+                <img className="partner-img" src={Microsoft} alt="microsoft" />
               </div>
               <div className="col-md-1">
-                <img src={Jazz} alt="jazz" />
+                <img className="partner-img" src={Jazz} alt="jazz" />
               </div>
               <div className="col-md-1">
-                <img src={Utah} alt="utah" />
+                <img className="partner-img" src={Utah} alt="utah" />
               </div>
               <div className="col-md-1">
-                <img src={Fuze} alt="fuze" />
+                <img className="partner-img" src={Fuze} alt="fuze" />
               </div>
               <div className="col-md-1">
-                <img src={Stars} alt="stars" />
+                <img className="partner-img" src={Stars} alt="stars" />
               </div>
               <div className="col-md-1">
-                <img src={Bees} alt="bees" />
+                <img className="partner-img" src={Bees} alt="bees" />
               </div>
               <div className="col-md-1">
-                <img src={firstStar} alt="firststar" />
+                <img className="partner-img" src={firstStar} alt="firststar" />
               </div>
             </div>
           </div>

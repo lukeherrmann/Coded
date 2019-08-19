@@ -59,7 +59,7 @@
   z-index: 1
   bottom: 0
   width: 100%
-  height: 410px
+  height: auto
 
 .header-sm-white-footer
   color: #fffbfa
@@ -371,10 +371,21 @@
   color: blue
   z-index: 1
 
-.dropdown-item:hover .dropdown-content
-  display: block
+
 
 .faq
   position: relative
   z-index: 1
   background: #fffbfa
+  
+
+.week-info-block
+  padding-top: 40px
+
+.faq-sections
+  display: flex
+
+
+.footer-list
+  +below($lg)
+    display: none

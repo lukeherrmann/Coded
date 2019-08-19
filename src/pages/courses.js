@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import CourseType from "../components/coursetype"
 import Layout from "../components/layout"
+import CourseWeeks from "../components/courseweeks"
 import "../styles/main.sass"
 import webGrey from "../images/webGrey.png"
 import appGrey from "../images/appGrey.png"
@@ -72,7 +73,10 @@ class Courses extends React.Component {
                     </div>
                   </form>
 
-                  <CourseType data={this.props.data.allPrismicCourses.nodes} />
+                  <CourseType
+                    data={this.props.data.allPrismicCourses.nodes}
+                    selectedOption={this.state.selectedOption}
+                  />
 
                   <div className="padding-35-35">
                     <Link to="/signup/">
@@ -99,146 +103,10 @@ class Courses extends React.Component {
           </div>
           <div className="section">
             <div className="container">
-              <div className="row">
-                <div className="col-sm-1">
-                  <h1 className="header-xl-black-courses">1</h1>
-                  <p className="p-black">Week</p>
-                </div>
-                <div className="col-sm-4">
-                  <p className="p-black">
-                    Introduction to programming. Understanding HTML and CSS, we
-                    familiarize our campers with the terms they will need for
-                    our camp.
-                  </p>
-                  <div className="padding-15-15">
-                    <ul>
-                      <li className="dropdown-item">
-                        <p>Day Two</p>
-                        <p>+</p>
-                      </li>
-                      <li className="dropdown-item">
-                        <p>Day Two</p>
-                        <p>+</p>
-                      </li>
-                      <li className="dropdown-item">
-                        <p>Day Two</p>
-                        <p>+</p>
-                      </li>
-                      <li className="dropdown-item">
-                        <p>Day Two</p>
-                        <p>+</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-sm-offset-1 col-sm-1">
-                  <h1 className="header-xl-black-courses">2</h1>
-                  <p className="p-black">Week</p>
-                </div>
-                <div className="col-sm-4">
-                  <p className="p-black">
-                    Introduction to programming. Understanding HTML and CSS, we
-                    familiarize our campers with the terms they will need for
-                    our camp.
-                  </p>
-                  <div className="padding-15-15">
-                    <ul>
-                      <li className="dropdown-item">
-                        <span>
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </span>
-                        <div className="dropdown-content">
-                          <p>
-                            Introduction to programming. Understanding HTML and
-                            CSS, we familiarize our campers with the terms they
-                            will need for our camp.
-                          </p>
-                        </div>
-                      </li>
-                      <li className="dropdown-item">
-                        <p>Day Two</p>
-                        <p>+</p>
-                      </li>
-                      <li className="dropdown-item">
-                        <p>Day Two</p>
-                        <p>+</p>
-                      </li>
-                      <li className="dropdown-item">
-                        <p>Day Two</p>
-                        <p>+</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="padding-50-50">
-                <div className="row">
-                  <div className="col-sm-1">
-                    <h1 className="header-xl-black-courses">3</h1>
-                    <p className="p-black">Week</p>
-                  </div>
-                  <div className="col-sm-4">
-                    <p className="p-black">
-                      Introduction to programming. Understanding HTML and CSS,
-                      we familiarize our campers with the terms they will need
-                      for our camp.
-                    </p>
-                    <div className="padding-15-15">
-                      <ul>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-offset-1 col-sm-1">
-                    <h1 className="header-xl-black-courses">4</h1>
-                    <p className="p-black">Week</p>
-                  </div>
-                  <div className="col-sm-4">
-                    <p className="p-black">
-                      Introduction to programming. Understanding HTML and CSS,
-                      we familiarize our campers with the terms they will need
-                      for our camp.
-                    </p>
-                    <div className="padding-15-15">
-                      <ul>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                        <li className="dropdown-item">
-                          <p>Day Two</p>
-                          <p>+</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CourseWeeks
+                data={this.props.data.allPrismicCourses.nodes}
+                selectedOption={this.state.selectedOption}
+              />
             </div>
           </div>
         </div>
