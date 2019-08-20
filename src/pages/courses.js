@@ -24,7 +24,7 @@ class Courses extends React.Component {
           <div className="section">
             <div className="container">
               <div className="row">
-                <div className="col-sm-3">
+                <div className="col-xxs-12 col-md-3">
                   <div className="padding-20-20">
                     <p className="p-black">Select Your Course</p>
                     <div className="faq-underline" />
@@ -88,8 +88,18 @@ class Courses extends React.Component {
                     </Link>
                   </div>
                 </div>
-                <div className="col-sm-offset-3 col-sm-5">
-                  <img src={Img} />
+                <div className="courses-img">
+                  <div className="col-sm-offset-2 col-sm-6">
+                    <div className=".row.reverse">
+                      <div className="col-sm-12">
+                        <img
+                          src={Img}
+                          alt="courses-img"
+                          className="courses-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

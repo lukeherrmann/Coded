@@ -111,59 +111,65 @@ class Index extends React.Component {
             </div>
           </div>
         </div>
-        <div className="photo-1">
-          <img src={home1} alt="header-image-home" />
-        </div>
+
+        <img src={home1} className="photo-1" alt="header-image-home" />
+
         <div className="body-main">
           <div className="section">
             <div className="camp-options">
               <div className="container">
                 <div className="row">
-                  <div className="col-xs-12 col-sm-3">
+                  <div className="col-xs-12">
                     <div className="padding-20-20">
                       <h1 className="header-lg-black">Camp Options</h1>
                     </div>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-xxs-offset-2 col-xxs-6 col-sm-2">
-                    <div className="padding-15-15">
-                      <img src={Web} alt="web-icon" />
-                    </div>
-                    <div className="padding-15-15">
-                      <h3 className="header-med-black">{course_1.text}</h3>
-                    </div>
-                    <p className="p-black">{course_description_1.text}</p>
-                    <div className="link-blue">
-                      <Link to="/courses/">Learn More</Link>
-                    </div>
-                  </div>
-                  <div className="col-xxs-offset-2 col-xxs-6 col-sm-offset-1 col-sm-2">
-                    <div className="padding-15-15">
-                      <img src={App} alt="app-icon" />
-                    </div>
-                    <div className="padding-15-15">
-                      <h3 className="header-med-black">
-                        {course_title_2.text}
-                      </h3>
-                    </div>
-                    <p className="p-black">{course_description_2.text}</p>
-                    <div className="link-blue">
-                      <Link to="/courses/">Learn More</Link>
+                  <div className="col-xxs-7 col-md-2">
+                    <div className="body-text-spacing">
+                      <div className="padding-15-15">
+                        <img src={Web} alt="web-icon" />
+                      </div>
+                      <div className="padding-15-15">
+                        <h3 className="header-med-black">{course_1.text}</h3>
+                      </div>
+                      <p className="p-black">{course_description_1.text}</p>
+                      <div className="link-blue">
+                        <Link to="/courses/">Learn More</Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-xxs-offset-2 col-xxs-6 col-sm-offset-1 col-sm-2">
-                    <div className="padding-15-15">
-                      <img src={VR} alt="vr-icon" />
+                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                    <div className="body-text-spacing">
+                      <div className="padding-15-15">
+                        <img src={App} alt="app-icon" />
+                      </div>
+                      <div className="padding-15-15">
+                        <h3 className="header-med-black">
+                          {course_title_2.text}
+                        </h3>
+                      </div>
+                      <p className="p-black">{course_description_2.text}</p>
+                      <div className="link-blue">
+                        <Link to="/courses/">Learn More</Link>
+                      </div>
                     </div>
-                    <div className="padding-15-15">
-                      <h3 className="header-med-black">
-                        {course_title_3.text}
-                      </h3>
-                    </div>
-                    <p className="p-black">{course_description_3.text}</p>
-                    <div className="link-blue">
-                      <Link to="/courses/">Learn More</Link>
+                  </div>
+                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                    <div className="body-text-spacing">
+                      <div className="padding-15-15">
+                        <img src={VR} alt="vr-icon" />
+                      </div>
+                      <div className="padding-15-15">
+                        <h3 className="header-med-black">
+                          {course_title_3.text}
+                        </h3>
+                      </div>
+                      <p className="p-black">{course_description_3.text}</p>
+                      <div className="link-blue">
+                        <Link to="/courses/">Learn More</Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -211,24 +217,32 @@ class Index extends React.Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-xs-12 col-sm-2">
-                    <p className="p-black">{sec_2_subquote_1.text}</p>
+                  <div className="col-xxs-7 col-md-2">
+                    <p className="body-text-spacing p-black">
+                      {sec_2_subquote_1.text}
+                    </p>
                   </div>
-                  <div className="col-xs-12 col-sm-offset-1 col-sm-2">
-                    <p className="p-black">{sec_2_subquote_2.text}</p>
+                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                    <p className="body-text-spacing p-black">
+                      {sec_2_subquote_2.text}
+                    </p>
                   </div>
-                  <div className="col-xs-8 col-sm-offset-1 col-sm-2">
-                    <p className="p-black">{sec_2_subquote_3.text}</p>
+                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                    <p className="body-text-spacing p-black">
+                      {sec_2_subquote_3.text}
+                    </p>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-sm-2">
-                    <div className="padding-50-50">
-                      <Link to="/aboutus/">
-                        <div className="btn-blue-sm">
-                          <h5 className="btn-text-white">Our Story</h5>
-                        </div>
-                      </Link>
+                <div className="padding-50-50">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="btn-center">
+                        <Link to="/aboutus/">
+                          <div>
+                            <h5 className="btn-text-white">Our Story</h5>
+                          </div>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -272,26 +286,26 @@ class Index extends React.Component {
                 </div>
                 <div className="row">
                   <div className="col-xxs-8 col-md-7">
-                    <div className="header-med-black">
-                      <div className="padding-50-50">
-                        <h2>"{main_testimonial.text}"</h2>
-                      </div>
+                    <div className="padding-50-50">
+                      <h2 className="header-med-black">
+                        "{main_testimonial.text}"
+                      </h2>
                     </div>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-xs-12 col-md-3">
-                    <div className="testimonial-quotes">
+                    <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_1.text}"</p>
                     </div>
                   </div>
                   <div className="col-xs-12 col-md-3">
-                    <div className="">
+                    <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_2.text}"</p>
                     </div>
                   </div>
                   <div className="col-xs-12  col-md-3">
-                    <div className="">
+                    <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_3.text}"</p>
                     </div>
                   </div>
@@ -350,25 +364,25 @@ class Index extends React.Component {
               </div>
             </div>
             <div className="row between-xs">
-              <div className="col-md-1">
+              <div className="col-xs-1">
                 <img className="partner-img" src={Microsoft} alt="microsoft" />
               </div>
-              <div className="col-md-1">
+              <div className="col-xs-1">
                 <img className="partner-img" src={Jazz} alt="jazz" />
               </div>
-              <div className="col-md-1">
+              <div className="col-xs-1">
                 <img className="partner-img" src={Utah} alt="utah" />
               </div>
-              <div className="col-md-1">
+              <div className="col-xs-1">
                 <img className="partner-img" src={Fuze} alt="fuze" />
               </div>
-              <div className="col-md-1">
+              <div className="col-xs-1">
                 <img className="partner-img" src={Stars} alt="stars" />
               </div>
-              <div className="col-md-1">
+              <div className="col-xs-1">
                 <img className="partner-img" src={Bees} alt="bees" />
               </div>
-              <div className="col-md-1">
+              <div className="col-xs-1">
                 <img className="partner-img" src={firstStar} alt="firststar" />
               </div>
             </div>

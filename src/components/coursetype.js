@@ -10,7 +10,7 @@ class CourseType extends React.Component {
           <div className="padding-35-35">
             <div className="padding-20-20">
               <div className="row">
-                <div className="col-sm">
+                <div className="col-lg-12">
                   <div className="row-center">
                     <img src={webIcon} alt="web-icon" />
                     <div className="padding-top-20">
@@ -21,8 +21,12 @@ class CourseType extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="padding-15-15">
-                <p className="p-black">{courses.data.course_desc.text}</p>
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="padding-15-15">
+                    <p className="p-black">{courses.data.course_desc.text}</p>
+                  </div>
+                </div>
               </div>
             </div>
             <h4 className="header-sm-black">{courses.data.course_date.text}</h4>

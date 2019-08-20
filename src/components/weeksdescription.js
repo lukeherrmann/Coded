@@ -5,7 +5,8 @@ class WeeksDescription extends React.Component {
   render() {
     return (
       <>
-        <p className="p-black">{this.props.week.data.week_description.text}</p>
+        <div className="padding-top-30" />
+        <p className="p-black-bold">{this.props.week.data.week_description.text}</p>
         <CourseDropdown days={this.props.week.data.days} />
       </>
     )
