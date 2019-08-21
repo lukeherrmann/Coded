@@ -21,14 +21,14 @@ class Question extends React.Component {
   render() {
     return (
       <>
-        <li key={this.props.index} className="dropdown-item" onClick={this.showDropdownMenu}>
-          <p className="p-black">{this.props.question}</p>
-          <p>+</p>
-        </li>
-        {this.state.displayInfo ? (
-                <p className="p-black">{this.props.answer}</p>
-              ) : null}
-      </>
+      <li key={this.props.index} className="dropdown-item" onClick={this.showDropdownMenu}>
+        <div className="dropdown-title" >
+          <p className={`${this.state.displayInfo ? 'active-title' : ''} p-black`}>{this.props.question}</p>
+          <p className={`${this.state.displayInfo ? 'rotate-in' : 'rotate-out'} p-black`}>+</p>
+        </div>
+        <p className={`${this.state.displayInfo ? 'dropdown-content' : 'none'} p-black`}>{this.props.answer}</p>
+      </li>
+    </>
     )
   }
 }
