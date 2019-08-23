@@ -49,8 +49,11 @@
   position: absolute
   z-index: 2
   right: 0
+  +below($lg)
+    
 
-
+.course-form
+  display: flex
 
 .footer-container
   @include footer-gradient(left, $list1)
@@ -58,12 +61,14 @@
   z-index: 1
   bottom: 0
   width: 100%
-  height: 410px
+  height: auto
 
 .header-sm-white-footer
   color: #fffbfa
   font-size: 1.2rem
   font-weight: bold
+  +below($lg)
+    padding-top: 40px
 
 .header-container
   position: relative
@@ -117,7 +122,7 @@
   display: flex
   justify-content: center
   align-items: center
-  width: 187px
+  width: 190px
   height: 50px
   background-color: #fffbfa
 
@@ -129,13 +134,18 @@
   height: 50px
   background-color: #fffbfa
 
-.btn-blue-sm
-  display: flex
-  justify-content: center
-  align-items: center
-  width: 11.875rem
-  height: 3.125rem
-  background-color: #37cbc1
+.btn-center
+  &:nth-child(1)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 11.875rem
+    height: 3.125rem
+    background-color: #37cbc1
+    +below($sm)
+      width: 100%
+      height: 5.5rem
+    
 
 .btn-text-blue
   font-size: 1.5rem
@@ -180,6 +190,11 @@
 .p-black
   color: #4b4f52
   size: 1.0625
+
+.p-black-bold
+  color: #4b4f52
+  size: 1.1
+  font-weight: bold
  
 .link-blue
   padding-top: 20px
@@ -251,6 +266,10 @@
   padding-top: 15px
   padding-bottom: 15px
 
+.padding-10-10
+  padding-top: 10px
+  padding-bottom: 10px
+
 .padding-top-15
   padding-top: 15px
 
@@ -266,6 +285,15 @@
   z-index: 3
   box-shadow: 0 2px 30px 0 rgba(69, 69, 69, 0.2)
   background: #fffbfa
+
+.box-shadow:hover 
+  background:#37cbc1
+  box-shadow: 0 2px 30px 0 rgba(146, 146, 146, 0.54)
+  .p-box
+    color: white
+  .header-lg-black
+    color: white
+
 
 .box-shadow-text
   display: flex
@@ -291,7 +319,7 @@
 .faq-underline
   width: 100%
   height: 2px
-  opacity: 0.45
+  opacity: 0.80
   border-bottom: solid 1px #4b4f52
 
 .center-items
@@ -331,6 +359,9 @@
 
 .forms-radio
   display: flex
+  justify-content: center
+  flex-direction: row
+  padding-top: 1rem
 
 .sign-up
   background: $white
@@ -352,9 +383,6 @@
   height: auto
 
 .dropdown-item
-  position: relative
-  display: flex
-  justify-content: space-between
   padding-top: 10px
   padding-bottom: 10px
   color: #4b4f52
@@ -363,17 +391,67 @@
   outline: 0
   background: transparent
   border-bottom: solid 1px #979797
+  .dropdown-title
+    display: flex
+    justify-content: space-between
+  .dropdown-content
+    padding-top: 10px
+    color: #2b91bf !important
+  .active-title
+    color: #2b91bf !important
+    font-weight: bold
+  .rotate-in
+    color: #2b91bf !important
+    transform: rotate(45deg)
+    transition-duration: .2s
+  .rotate-out
+    transform: rotate(0deg)
+    transition-duration: .2s
+  .none
+    display: none
 
-.dropdown-content
-  display: none
-  position: absolute
-  color: blue
-  z-index: 1
 
-.dropdown-item:hover .dropdown-content
-  display: block
+.courses-img
+  height: auto
+  width: auto
+  +below($lg)
+    display: none
 
 .faq
   position: relative
   z-index: 1
   background: #fffbfa
+
+.faq-sections
+  display: flex
+
+.footer-list
+  +below($sm)
+    display: none
+
+.body-text-spacing
+  +below($md)
+    padding-top: 1.5rem
+
+.padding-top-30
+  padding-top: 30px
+
+.logos
+  display: flex
+  justify-content: space-between
+  flex-direction: row
+
+.course-label
+  display: flex
+  align-items: center
+  flex-direction: column
+  +below($md)
+    margin-left: 0rem
+
+.padding-left
+  padding-left: 10px
+
+.radio-icons
+  +below($sm)
+    display: flex
+    flex-direction: row

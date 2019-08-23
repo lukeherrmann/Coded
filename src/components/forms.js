@@ -60,27 +60,31 @@ class Forms extends React.Component {
             />
           </div>
           <div className="padding-20-20">
-            <div className="forms-radio">
-              <label>
-                <input
-                  type="radio"
-                  name="programLength"
-                  value="month"
-                  checked={this.state.selectedOption === "month"}
-                  onChange={this.handleRadio}
-                />
-                <p className="p-black">Month Program - $999.00</p>
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="programLength"
-                  value="week"
-                  checked={this.state.selectedOption === "week"}
-                  onChange={this.handleRadio}
-                />
-                <p className="p-black">Week Program - $299.00</p>
-              </label>
+            <div className="row">
+              <div className="col-xs-6">
+                <label className="forms-radio">
+                  <input
+                    type="radio"
+                    name="programLength"
+                    value="month"
+                    checked={this.state.selectedOption === "month"}
+                    onChange={this.handleRadio}
+                  />
+                  <p className="p-black padding-left">Month Program - $999.00</p>
+                </label>
+              </div>
+              <div className="col-xs-6">
+                <label className="forms-radio">
+                  <input
+                    type="radio"
+                    name="programLength"
+                    value="week"
+                    checked={this.state.selectedOption === "week"}
+                    onChange={this.handleRadio}
+                  />
+                  <p className="p-black padding-left">Week Program - $299.00</p>
+                </label>
+              </div>
             </div>
           </div>
           <div className="padding-35-35">
