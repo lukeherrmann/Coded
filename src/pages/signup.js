@@ -56,12 +56,12 @@ class SignUp extends React.Component {
                 </div>
                 {this.state.parent ? <Forms /> : <BusinessForms />}
               </div>
-              <div className=" col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-4">
+              <div className="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-4 radio-icons">
                 <div className="padding-top-top">
                   <div className="padding-35-35">
                     <div className="padding-20-20">
                       <div className="row">
-                        <div className="col-sm">
+                        <div className="col-xs-2 col-sm-1">
                           <div className="row-center">
                             <img src={webIcon} alt="web-icon" />
                             <div className="padding-top-20">
@@ -76,7 +76,7 @@ class SignUp extends React.Component {
                   <div className="padding-35-35">
                     <div className="padding-20-20">
                       <div className="row">
-                        <div className="col-sm">
+                        <div className="col-xs-2 col-sm-1">
                           <div className="row-center">
                             <img src={appIcon} alt="app-icon" />
                             <div className="padding-top-20">
@@ -91,7 +91,7 @@ class SignUp extends React.Component {
                   <div className="padding-35-35">
                     <div className="padding-20-20">
                       <div className="row">
-                        <div className="col-sm">
+                        <div className="col-xs-2 col-sm-1">
                           <div className="row-center">
                             <img src={vrIcon} alt="vr-icon" />
                             <div className="padding-top-20">

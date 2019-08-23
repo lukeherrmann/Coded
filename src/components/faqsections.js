@@ -1,53 +1,43 @@
 import React from "react"
 import FaqQuestions from "../components/faqquestions"
+import FaqTitle from "./faqtitle"
 
 class FaqSections extends React.Component {
-  state = { displayInfo: false, selectedSection: "" }
+  state = { selectedSection: "" }
 
-  handleClick = section => {
-    this.setState({ selectedSection: section, })
+  componentDidMount(){
+    const sec = this.props.data[0]
+    const secTitle = sec.data.section_title.text
+    this.setState({ selectedSection: secTitle})
   }
 
-  showDropdownMenu = event => {
-    event.preventDefault()
-    debugger
-    this.setState({ displayInfo: true }, () => {
-      document.addEventListener("click", this.hideDropdownMenu)
-    })
-  }
-
-  hideDropdownMenu = () => {
-    this.setState({ displayInfo: false }, () => {
-      document.removeEventListener("click", this.hideDropdownMenu)
-    })
+  setSection = (section) => {
+    this.setState({ selectedSection: section })
   }
 
   render() {
     return (
       <>
         <div className="container">
-          <form>
-            <div className="row">
-              {this.props.data.map(section => {
-                return (
-                  <div className="col-sm-1">
-                    <h1
-                      onClick={(this.showDropdownMenu, () => this.handleClick(section.data.section_title.text))}
-                      className={`${this.state.displayInfo ? 'p-black' : 'header-med-black'} `}
-                    >
-                      {section.data.section_title.text}
-                    </h1>
-                  </div>
-                )
-              })}
-            </div>
-          </form>
+          <div className="row bottom-xs">
+            {this.props.data.map((section, index) => {
+              return (
+                <div className="col-sm-1">
+                  <FaqTitle
+                    title={section.data.section_title.text}
+                    index={index}
+                    getSection={this.setSection}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+        <div className="row">
+
         </div>
         <div className="padding-35-35">
-          <FaqQuestions
-            sections={this.props.data}
-            selectedSection={this.state.selectedSection}
-          />
+          <FaqQuestions sections={this.props.data} selectedSection={this.state.selectedSection} />
         </div>
       </>
     )

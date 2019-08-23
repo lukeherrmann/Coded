@@ -4,12 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 class Faq extends React.Component {
-  state = { selectedOption: "What" }
-
-  handleChange = changeEvent => {
-    this.setState({ selectedOption: changeEvent.target.value })
-  }
-
   render() {
     return (
       <Layout>
@@ -26,7 +20,9 @@ class Faq extends React.Component {
               <div className="container">
                 <div className="row">
                   <div className="col-sm-offset-3">
-                    <FaqSections data={this.props.data.allPrismicFaqSection.nodes} />
+                    <FaqSections
+                      data={this.props.data.allPrismicFaqSection.nodes}
+                    />
                   </div>
                 </div>
               </div>

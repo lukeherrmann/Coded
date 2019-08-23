@@ -328,24 +328,20 @@ class Index extends React.Component {
               <div className="padding-50-50">
                 <div className="row between-sm">
                   <div className="col-xs-12 col-md-5">
-                    <Link to="/signup" state={{ form: "parents" }}>
+                    <Link className="link" to="/signup" state={{ form: "parents" }}>
                       <div className="box-shadow">
                         <div className="box-shadow-text">
-                          <div className="padding-15-15">
-                            <p className="p-black">I'm a</p>
-                          </div>
+                          <p className="p-box padding-15-15">I'm a</p>
                           <h2 className="header-lg-black">Parent</h2>
                         </div>
                       </div>
                     </Link>
                   </div>
                   <div className="col-xs-12 col-md-5">
-                    <Link to="/signup" state={{ form: "business" }}>
+                    <Link className="link" to="/signup" state={{ form: "business" }}>
                       <div className="box-shadow">
                         <div className="box-shadow-text">
-                          <div className="padding-15-15">
-                            <p className="p-black">I have a</p>
-                          </div>
+                          <p className="p-box padding-15-15">I have a</p>
                           <h2 className="header-lg-black">Business</h2>
                         </div>
                       </div>

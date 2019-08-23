@@ -24,17 +24,21 @@ class Courses extends React.Component {
           <div className="section">
             <div className="container">
               <div className="row">
-                <div className="col-xxs-12 col-md-3">
-                  <div className="padding-20-20">
-                    <p className="p-black">Select Your Course</p>
-                    <div className="faq-underline" />
+                <div className="col-xxs-12 col-xs-offset-2 col-xs-8 col-sm-offset-0 col-md-3">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <p className="p-black">Select Your Course</p>
+                      <div className="padding-20-20">
+                        <div className="faq-underline" />
+                      </div>
+                    </div>
                   </div>
                   <form>
-                    <div className="row between-sm">
-                      <div className="col-sm-1">
-                        <label>
+                    <div className="row around-xs">
+                      <div className="col-xs-1">
+                        <label className="course-label">
                           <img src={webGrey} />
-                          <h3 className="header-sm-black">Web</h3>
+                          <h3 className="header-sm-black padding-10-10">Web</h3>
                           <input
                             type="radio"
                             name="courseType"
@@ -44,10 +48,10 @@ class Courses extends React.Component {
                           />
                         </label>
                       </div>
-                      <div className="col-sm-1">
-                        <label>
+                      <div className="col-xs-1">
+                        <label className="course-label">
                           <img src={appGrey} />
-                          <h3 className="header-sm-black">App</h3>
+                          <h3 className="header-sm-black padding-10-10">App</h3>
                           <input
                             type="radio"
                             name="courseType"
@@ -57,10 +61,10 @@ class Courses extends React.Component {
                           />
                         </label>
                       </div>
-                      <div className="col-sm-1">
-                        <label>
+                      <div className="col-xs-1">
+                        <label className="course-label">
                           <img src={vrGrey} />
-                          <h3 className="header-sm-black">VR</h3>
+                          <h3 className="header-sm-black padding-10-10">VR</h3>
                           <input
                             type="radio"
                             name="courseType"

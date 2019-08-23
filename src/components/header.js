@@ -14,15 +14,13 @@ const Header = () => (
         </div>
         <div className="col-xs-3 col-sm-2">
           <Link className="link" to="/courses/">
-            Learn About Our Courses
+            <p className="header-item">Learn About Our Courses</p>
           </Link>
         </div>
         <div className="col-xs-3 col-sm-1">
-          <div className="header-item">
-            <Link className="link" to="/aboutus/">
-              About Us
-            </Link>
-          </div>
+          <Link className="link" to="/aboutus/">
+            <p className="header-item">About Us</p>
+          </Link>
         </div>
       </div>
     </div>
