@@ -102,11 +102,11 @@ class Index extends React.Component {
             </div>
             <div className="row">
               <div className="col-xs-12 col-sm-4">
-                <div className="btn-sm-white">
-                  <Link to="/signup/">
+                <Link to="/signup/">
+                  <div className="btn-sm-white">
                     <h2 className="btn-text-blue">Enroll</h2>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ class Index extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                  <div className="col-xxs-7 col-md-offset-1 col-md-2">
                     <div className="body-text-spacing">
                       <div className="padding-15-15">
                         <img src={VR} alt="vr-icon" />
@@ -169,6 +169,32 @@ class Index extends React.Component {
                       <p className="p-black">{course_description_3.text}</p>
                       <div className="link-blue">
                         <Link to="/courses/">Learn More</Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-offset-1 col-md-3">
+                    <div className="row">
+                      <div className="col-xs-1">
+                        <div className="hover-dot" />
+                      </div>
+                      <div className="col-xs-11">
+                        <p className="hover-font">Grid System</p>
+                      </div>
+                    </div>
+                    <div className="hover-background row">
+                      <div className="col-xs-12">
+                        <p className="padding-10-10">Desktop Computer</p>
+                        <p className="padding-10-10">
+                          Grids help websites adapt to different screen sizes.
+                          Checkout the horizontal lines. See how they change for
+                          different screens.
+                        </p>
+                        <p className="padding-10-10">Phone</p>
+                        <p className="padding-10-10">
+                          Mobile devices are often constrained by display size
+                          and require a different approach to how content is
+                          laid out on screen.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -327,8 +353,12 @@ class Index extends React.Component {
               </div>
               <div className="padding-50-50">
                 <div className="row between-sm">
-                  <div className="col-xs-12 col-md-5">
-                    <Link className="link" to="/signup" state={{ form: "parents" }}>
+                  <div className="boxes col-xs-12 col-md-5">
+                    <Link
+                      className="link"
+                      to="/signup"
+                      state={{ form: "parents" }}
+                    >
                       <div className="box-shadow">
                         <div className="box-shadow-text">
                           <p className="p-box padding-15-15">I'm a</p>
@@ -337,8 +367,12 @@ class Index extends React.Component {
                       </div>
                     </Link>
                   </div>
-                  <div className="col-xs-12 col-md-5">
-                    <Link className="link" to="/signup" state={{ form: "business" }}>
+                  <div className="boxes col-xs-12 col-md-5">
+                    <Link
+                      className="link"
+                      to="/signup"
+                      state={{ form: "business" }}
+                    >
                       <div className="box-shadow">
                         <div className="box-shadow-text">
                           <p className="p-box padding-15-15">I have a</p>

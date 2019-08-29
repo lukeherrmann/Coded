@@ -27,7 +27,7 @@ class AboutUs extends React.Component {
         <img src={headerImage} alt="header-image" className="aboutus-image-header" />
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-4">
+            <div className="col-xs-12 col-sm-12">
               <h1 className="header-xl-black">{main_title.text}</h1>
             </div>
           </div>

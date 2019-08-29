@@ -84,8 +84,13 @@
   font-size: 1.2rem
 
 .header-item
-  display: flex
-  align-items: center
+  +below($md)
+    display: none
+
+.show-dropdown
+  display: none
+  +below($md)
+    display: inline
 
 .link
   color: #232424
@@ -122,7 +127,7 @@
   display: flex
   justify-content: center
   align-items: center
-  width: 190px
+  width: auto
   height: 50px
   background-color: #fffbfa
 
@@ -277,6 +282,10 @@
   position: relative
   z-index: 1
   background: $white
+
+.boxes
+  +below($md)
+    padding: 3rem 
 
 .box-shadow
   position: relative
@@ -455,3 +464,28 @@
   +below($sm)
     display: flex
     flex-direction: row
+
+.hide
+  display: none
+
+.hover-dot
+  height: 1rem
+  width: 1rem
+  background-color: #ffc545
+  border-radius: 50%
+  display: inline-block
+  margin-left: -.48rem
+
+.hover-font
+  color: #ffc545
+  font-size: 1rem
+  font-weight: bold
+
+.hover-background
+  display: none
+
+.hover-background:hover
+  display: flex
+  position: relative
+  background-color: #ffedcb
+  left: 2.5%

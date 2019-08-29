@@ -6,26 +6,28 @@ class HeaderDropdown extends React.Component {
     displayMenu: false,
   }
 
-  showDropdownMenu = (event) => {
+  showDropdown = event => {
     event.preventDefault()
     this.setState({ displayMenu: true }, () => {
-      document.addEventListener("click", this.hideDropdownMenu)
+      document.addEventListener("click", this.hideDropdown)
     })
   }
 
-  hideDropdownMenu = () => {
+  hideDropdown = () => {
     this.setState({ displayMenu: false }, () => {
-      document.removeEventListener("click", this.hideDropdownMenu)
+      document.removeEventListener("click", this.hideDropdown)
     })
   }
 
   render() {
     return (
-      <div className={`dropdown-header ${this.state.displayMenu ? 'active' : ''}`}>
-        <div className="dropdown-button" onClick={this.showDropdownMenu}>
-          <img src={menuIcon} alt="menu-icon" />
-        </div>
-        <ul>
+      <div className={`${this.state.displayMenu ? "active" : ""}`}>
+        <img onClick={this.showDropdown} src={menuIcon} alt="menu-icon" />
+        <ul
+          className={`${
+            this.state.displayMenu ? "active-title" : "hide"
+          } p-black`}
+        >
           <li>Courses</li>
           <li>About Us</li>
         </ul>

@@ -24,11 +24,9 @@ class Footer extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-2">
-                <div className="header-sm-white-footer">
-                  <Link to="/">
-                    <img src={logoWhite} alt="logo-white" />
-                  </Link>
-                </div>
+                <Link to="/">
+                  <img src={logoWhite} alt="logo-white" />
+                </Link>
               </div>
               <div className="col-xs-12 col-sm-offset-2 col-sm-2">
                 <h5 className="header-sm-white-footer">CAMPS</h5>
