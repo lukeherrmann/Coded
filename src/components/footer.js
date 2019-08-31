@@ -23,12 +23,12 @@ class Footer extends React.Component {
         <div className="section">
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-2">
+              <div className="col-xs-offset-2 col-xs-10 col-md-offset-0 col-md-2">
                 <Link to="/">
                   <img src={logoWhite} alt="logo-white" />
                 </Link>
               </div>
-              <div className="col-xs-12 col-sm-offset-2 col-sm-2">
+              <div className="col-xs-offset-2 col-xs-10 col-md-offset-4 col-md-2">
                 <h5 className="header-sm-white-footer">CAMPS</h5>
                 <ul className="footer-list">
                   <Link to="/courses">
@@ -42,16 +42,7 @@ class Footer extends React.Component {
                   </Link>
                 </ul>
               </div>
-              <div className="col-xs-12 col-sm-offset-1 col-sm-2">
-                <h5 className="header-sm-white-footer">RESOURCES</h5>
-                <ul className="footer-list">
-                  <li className="list-item-sm-white">Teaching Materials</li>
-                  <li className="list-item-sm-white">Interactive Websites</li>
-                  <li className="list-item-sm-white">Swift Playgrounds</li>
-                  <li className="list-item-sm-white">Intro to iOS</li>
-                </ul>
-              </div>
-              <div className="col-xs-12 col-sm-offset-1 col-sm-2">
+              <div className="col-xs-offset-2 col-xs-10 col-md-offset-1 col-md-2">
                 <h5 className="header-sm-white-footer">COMPANY</h5>
                 <ul className="footer-list">
                   <Link to="/faq/">
@@ -64,23 +55,21 @@ class Footer extends React.Component {
               </div>
             </div>
             <div className="section-footer">
-              <div className="row bottom-sm">
-                <div className="col-xxs-12 col-sm-6">
-                  <div className="row between-sm">
-                    <div className="logos">
-                      <div className="col-sm-4">
-                        <img src={FB} alt="facebook-icon" />
-                      </div>
-                      <div className="col-sm-4">
-                        <img src={Twitter} alt="twitter-icon" />
-                      </div>
-                      <div className="col-sm-4">
-                        <img src={Insta} alt="instagram-icon" />
-                      </div>
+              <div className="row bottom-sm hide-mobile">
+                <div className="col-xs-4 col-sm-4">
+                  <div className="row between-sm logos">
+                    <div className="col-xs">
+                      <img src={FB} alt="facebook-icon" />
+                    </div>
+                    <div className="col-xs">
+                      <img src={Twitter} alt="twitter-icon" />
+                    </div>
+                    <div className="col-xs">
+                      <img src={Insta} alt="instagram-icon" />
                     </div>
                   </div>
                 </div>
-                <div className="col-xxs-12 col-sm-6">
+                <div className="col-xxs-12 col-sm-offset-2 col-sm-6">
                   <form onSubmit={this.handleSubmit}>
                     <div className="row bottom-xs">
                       <div className="col-xxs-12 col-sm-8">
@@ -99,6 +88,40 @@ class Footer extends React.Component {
                       </div>
                     </div>
                   </form>
+                </div>
+              </div>
+
+              <div className="row show-mobile padding-20-20">
+                <div className="col-xs-offset-2 col-xs-8">
+                  <input
+                    className="footer-form"
+                    name="email"
+                    placeholder="Your Email"
+                    value={email}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>
+              <div className="row show-mobile padding-20-20">
+                <div className="col-xs-offset-2 col-xs-8 footer-button">
+                  <div className="btn-med-white">
+                    <div className="btn-text-blue-sm">Subscribe</div>
+                  </div>
+                </div>
+              </div>
+              <div className="row center-xs show-mobile padding-20-20">
+                <div className="col-xxs-12 col-xs-offset-1 col-xs-6">
+                  <div className="row between-sm logos">
+                    <div className="col-xxs-4 col-xs">
+                      <img src={FB} alt="facebook-icon" />
+                    </div>
+                    <div className="col-xxs-4 col-xs">
+                      <img src={Twitter} alt="twitter-icon" />
+                    </div>
+                    <div className="col-xxs-4 col-xs">
+                      <img src={Insta} alt="instagram-icon" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

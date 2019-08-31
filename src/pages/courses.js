@@ -37,7 +37,7 @@ class Courses extends React.Component {
                     <div className="row around-xs">
                       <div className="col-xs-1">
                         <label className="course-label">
-                          <img src={webGrey} />
+                          <img src={webGrey} alt="web-icon-gray" />
                           <h3 className="header-sm-black padding-10-10">Web</h3>
                           <input
                             type="radio"
@@ -50,7 +50,7 @@ class Courses extends React.Component {
                       </div>
                       <div className="col-xs-1">
                         <label className="course-label">
-                          <img src={appGrey} />
+                          <img src={appGrey} alt="app-icon-gray" />
                           <h3 className="header-sm-black padding-10-10">App</h3>
                           <input
                             type="radio"
@@ -63,7 +63,7 @@ class Courses extends React.Component {
                       </div>
                       <div className="col-xs-1">
                         <label className="course-label">
-                          <img src={vrGrey} />
+                          <img src={vrGrey} alt="vr-icon-gray" />
                           <h3 className="header-sm-black padding-10-10">VR</h3>
                           <input
                             type="radio"
@@ -98,7 +98,7 @@ class Courses extends React.Component {
                       <div className="col-sm-12">
                         <img
                           src={Img}
-                          alt="courses-img"
+                          alt="header"
                           className="courses-img"
                         />
                       </div>

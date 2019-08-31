@@ -1,5 +1,4 @@
 import React from "react"
-import CourseDropdown from "./coursedropdown"
 
 class WeeksTitle extends React.Component {
   render() {

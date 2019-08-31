@@ -24,7 +24,11 @@ class AboutUs extends React.Component {
     } = this.props
     return (
       <Layout>
-        <img src={headerImage} alt="header-image" className="aboutus-image-header" />
+        <img
+          src={headerImage}
+          alt="header"
+          className="aboutus-image-header"
+        />
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12">
@@ -32,14 +36,18 @@ class AboutUs extends React.Component {
             </div>
           </div>
         </div>
-        <div className="section">
+        <div className="section mobile">
           <div className="container">
             <div className="row middle-xs">
-              <div className="col-sm-9">
+              <div className="col-sm-8">
                 <div className="blue-square-left-about" />
-                <img src={aboutUs1} alt="body-image-1" className="filler-photo" />
+                <img
+                  src={aboutUs1}
+                  alt="body-1"
+                  className="filler-photo"
+                />
               </div>
-              <div className="col-sm-3">
+              <div className="col-xxs-12 col-md-offset-1 col-md-3">
                 <div className="padding-50-50">
                   <h1 className="header-lg-black-about">{subtitle_1.text}</h1>
                 </div>
@@ -48,19 +56,34 @@ class AboutUs extends React.Component {
             </div>
           </div>
         </div>
-        <div className="section">
+        <div className="container mobile">
+        <div className="row">
+              <div className="col-xxs-12">
+              <img
+                  src={aboutUs1}
+                  alt="body-mobile"
+                  className="filler-photo-mobile"
+                />
+              </div>
+            </div>
+        </div>
+        <div className="section mobile">
           <div className="container">
             <div className="row middle-xs">
-              <div className="col-sm-3">
-                <div className="padding-50-50">
-                  <h1 className="header-lg-black-about">{subtitle_2.text}</h1>
-                </div>
+              <div className="col-xxs-12 col-md-3">
+                <h1 className="header-lg-black-about padding-50-50">
+                  {subtitle_2.text}
+                </h1>
                 <p className="p-black">{description_2.text}</p>
               </div>
-              <div className="col-sm-9">
+              <div className="col-md-9">
                 <div className="row">
                   <div className="col-sm-offset-1 col-sm-11">
-                    <img src={aboutUs2} alt="body-image-2" className="filler-photo-2" />
+                    <img
+                      src={aboutUs2}
+                      alt="body-2"
+                      className="filler-photo-2"
+                    />
                   </div>
                   <div className="col-sm-offset-8">
                     <div className="blue-square-right-about" />

@@ -4,20 +4,35 @@
   padding-top: 50px
 
 .filler-photo
+  display: block
   position: relative
-  width: 902px
-  height: 467.7px
+  width: 100%
+  height: auto
   left: 2rem
   top: 2rem
   z-index: 2
+  +below($md)
+    display: none
+
+.filler-photo-mobile
+  display: none
+  +below($md)
+    display: block
+    width: 100%
+    height: auto
+    padding-top: 3rem
 
 .filler-photo-2
+  display: block
   position: relative
-  width: 902px
-  height: 467.7px
+  width: 100%
+  height: auto
   right: 2rem
   top: 2rem
   z-index: 2
+  +below($md)
+    display: none
+
 
 .blue-square-left-about
   position: absolute
@@ -25,6 +40,8 @@
   width: 24.65%
   height: 20rem
   z-index: 2
+  +below($md)
+    display: none
 
 .blue-square-right-about
   position: absolute
@@ -33,6 +50,8 @@
   width: 23.6%
   height: 20rem
   z-index: 1
+  +below($md)
+    display: none
 
 .header-lg-black-about
   color: #4b4f52
