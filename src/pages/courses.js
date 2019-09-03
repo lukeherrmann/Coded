@@ -24,7 +24,7 @@ class Courses extends React.Component {
           <div className="section">
             <div className="container">
               <div className="row">
-                <div className="col-xxs-12 col-xs-offset-2 col-xs-8 col-sm-offset-0 col-md-3">
+                <div className="col-xxs-12 col-xs-offset-2 col-xs-8 col-md-offset-0 col-md-3">
                   <div className="row">
                     <div className="col-sm-12">
                       <p className="p-black">Select Your Course</p>
@@ -92,17 +92,9 @@ class Courses extends React.Component {
                     </Link>
                   </div>
                 </div>
-                <div className="courses-img">
-                  <div className="col-sm-offset-2 col-sm-6">
-                    <div className=".row.reverse">
-                      <div className="col-sm-12">
-                        <img
-                          src={Img}
-                          alt="header"
-                          className="courses-img"
-                        />
-                      </div>
-                    </div>
+                <div className="col-md-offset-1 col-md-8">
+                  <div className="col-sm-12">
+                    <img src={Img} alt="header" className="courses-img" />
                   </div>
                 </div>
               </div>
@@ -115,7 +107,7 @@ class Courses extends React.Component {
               </div>
             </div>
           </div>
-          <div className="section">
+          <div className="section mobile">
             <div className="container">
               <CourseWeeks
                 data={this.props.data.allPrismicCourses.nodes}

@@ -6,7 +6,7 @@ class FaqQuestions extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-sm-6">
+          <div className="co-xs-12 col-sm-6">
             {this.props.sections.map(section => {
               if (
                 section.data.section_title.text === this.props.selectedSection
