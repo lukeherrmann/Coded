@@ -22,12 +22,15 @@ class SignUp extends React.Component {
   render() {
     const {
       data: {
-        allPrismicAboutCourse: {
-          nodes: [
-            {
-              data: { course_description, course_title },
-            },
-          ],
+        prismicSignup: {
+          data: {
+            course_1_title,
+            course_1_desc,
+            course_2_title,
+            course_2_desc,
+            course_3_title,
+            course_3_desc,
+          },
         },
       },
     } = this.props
@@ -65,13 +68,15 @@ class SignUp extends React.Component {
                           <div className="row-center">
                             <img src={webIcon} alt="web-icon" />
                             <div className="padding-top-20">
-                              <h1 className="header-lg-black">Web</h1>
+                              <h1 className="header-lg-black">
+                                {course_1_title.text}
+                              </h1>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <p className="p-black">{course_description.text}</p>
+                    <p className="p-black">{course_1_desc.text}</p>
                   </div>
                   <div className="padding-35-35">
                     <div className="padding-20-20">
@@ -80,13 +85,15 @@ class SignUp extends React.Component {
                           <div className="row-center">
                             <img src={appIcon} alt="app-icon" />
                             <div className="padding-top-20">
-                              <h1 className="header-lg-black">App</h1>
+                              <h1 className="header-lg-black">
+                                {course_2_title.text}
+                              </h1>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <p className="p-black">{course_description.text}</p>
+                    <p className="p-black">{course_2_desc.text}</p>
                   </div>
                   <div className="padding-35-35">
                     <div className="padding-20-20">
@@ -95,13 +102,15 @@ class SignUp extends React.Component {
                           <div className="row-center">
                             <img src={vrIcon} alt="vr-icon" />
                             <div className="padding-top-20">
-                              <h1 className="header-lg-black">VR</h1>
+                              <h1 className="header-lg-black">
+                                {course_3_title.text}
+                              </h1>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <p className="p-black">{course_description.text}</p>
+                    <p className="p-black">{course_3_desc.text}</p>
                   </div>
                 </div>
               </div>
@@ -115,16 +124,26 @@ class SignUp extends React.Component {
 export default SignUp
 
 export const pageQuery = graphql`
-  query {
-    allPrismicAboutCourse {
-      nodes {
-        data {
-          course_description {
-            text
-          }
-          course_title {
-            text
-          }
+  query Signup {
+    prismicSignup {
+      data {
+        course_1_title {
+          text
+        }
+        course_1_desc {
+          text
+        }
+        course_2_title {
+          text
+        }
+        course_2_desc {
+          text
+        }
+        course_3_title {
+          text
+        }
+        course_3_desc {
+          text
         }
       }
     }

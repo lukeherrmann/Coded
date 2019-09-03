@@ -16,6 +16,11 @@
   padding-top: 100px
   padding-bottom: 100px
 
+.mobile
+  +below($md)
+    padding-top: 1.5rem
+    padding-bottom: 2.5rem
+
 .section-footer
   position: relative
   padding-top: 40px
@@ -50,13 +55,19 @@
   z-index: 2
   right: 0
   +below($lg)
+    position: relative
+    margin-top: -8rem
+    right: 0
+    width: 100%
+    height: auto
+
     
 
 .course-form
   display: flex
 
 .footer-container
-  @include footer-gradient(left, $list1)
+  @include footer-gradient(to right, $list1)
   position: relative
   z-index: 1
   bottom: 0
@@ -75,7 +86,9 @@
   display: flex
   align-items: center
   width: 100%
-  height: 60px
+  height: auto
+  padding-top: 1rem
+  padding-bottom: 1rem
   background: #fffbfa
   z-index: 1
 
@@ -84,8 +97,14 @@
   font-size: 1.2rem
 
 .header-item
-  display: flex
-  align-items: center
+  +below($md)
+    display: none
+
+.show-dropdown
+  display: none
+  +below($md)
+    display: flex
+    flex-direction: column
 
 .link
   color: #232424
@@ -97,7 +116,7 @@
 
 .gradient-sq-top
   position: relative
-  @include footer-gradient(left, $list1)
+  @include footer-gradient(to right, $list1)
   height: 700px
 
 .camper-text-container
@@ -122,7 +141,7 @@
   display: flex
   justify-content: center
   align-items: center
-  width: 190px
+  width: auto
   height: 50px
   background-color: #fffbfa
 
@@ -167,6 +186,13 @@
   font-weight: bold
   font-size: 2.5rem
 
+.header-lg-blue
+  color: #2b91bf
+  font-weight: bold
+  font-size: 2.5rem
+  padding-top: 2rem
+  margin-left: 1rem
+
 .header-lg-black-wrap
   color: #4b4f52
   font-weight: bold
@@ -189,12 +215,17 @@
 
 .p-black
   color: #4b4f52
-  size: 1.0625
+  font-size: 1.0625rem
+  +below($md)
+    font-size: 1.4rem
 
 .p-black-bold
   color: #4b4f52
-  size: 1.1
+  font-size: 1.1rem
   font-weight: bold
+  padding-bottom: 10px
+  +below($md)
+    font-size: 1.5rem
  
 .link-blue
   padding-top: 20px
@@ -204,38 +235,48 @@
   top: 0
   left: 0
   margin-top: -5rem
-  @include footer-gradient(left, $list1)
+  @include footer-gradient(to right, $list1)
   width: 22.2rem
   height: 20rem
   z-index: 2
+  +below($md)
+    display: none
   
 .blue-square-2
   position: absolute
   top: 0
   right: 0
   margin-top: -5rem
-  @include footer-gradient(right, $list1)
+  @include footer-gradient(to left, $list1)
   width: 22.2rem
   height: 20rem
   z-index: 2
+  +below($md)
+    display: none
   
 .gray-sq-right
   position: absolute
   top: 0
   left: 50%
   background: #f7f5f4
-  height: 99.7%
+  height: 100%
   width: 50%
   z-index: 2
+  +below($md)
+    width: 100%
+    left: auto
 
 .gray-sq-left
   position: absolute
   top: 0
   right: 50%
   background: #f7f5f4
-  height: 99.7%
+  height: 100%
   width: 50%
   z-index: 2
+  +below($md)
+    width: 100%
+    right: auto
 
 .container
   position: relative
@@ -278,6 +319,10 @@
   z-index: 1
   background: $white
 
+.boxes
+  +below($md)
+    padding: 3rem 
+
 .box-shadow
   position: relative
   width: auto
@@ -304,7 +349,7 @@
 .gray-partner-container
   position: relative
   width: 100%
-  height: 275px
+  height: auto
   background-color: #f7f5f4
 
 .header-lg-gray
@@ -417,6 +462,11 @@
   +below($lg)
     display: none
 
+.img-2
+  display: block
+  width: 100%
+  height: auto
+
 .faq
   position: relative
   z-index: 1
@@ -424,10 +474,6 @@
 
 .faq-sections
   display: flex
-
-.footer-list
-  +below($sm)
-    display: none
 
 .body-text-spacing
   +below($md)
@@ -455,3 +501,44 @@
   +below($sm)
     display: flex
     flex-direction: row
+
+.hide
+  display: none
+
+.show
+  display: flex
+
+.hover-dot
+  height: 1rem
+  width: 1rem
+  background-color: #ffc545
+  border-radius: 50%
+  display: inline-block
+  margin-left: -.48rem
+
+.hover-font
+  color: #ffc545
+  font-size: 1rem
+  font-weight: bold
+
+.hover-background
+  display: flex
+  position: relative
+  background-color: #ffedcb
+  left: 2.5%
+
+.partner-img
+  text-align: center
+
+.hide-mobile
+  +below($md)
+    display: none
+
+.show-mobile
+  display: none
+  +below($md)
+    display: flex
+
+.menu-icon
+  width: auto
+  height: auto

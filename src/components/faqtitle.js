@@ -5,15 +5,13 @@ class FaqTitle extends React.Component {
 
   showTitle = (title, id) => {
     this.props.getSection(title)
-    this.setState({ displayTitle: true }, () => {
-      document.getElementById(id).addEventListener("click", () => this.hideTitle(id))
-    })
+    this.setState({ displayTitle: true }
+    )
   }
 
   hideTitle = (id) => {
     this.setState({ displayTitle: false }, () => {
       document.getElementById(id).removeEventListener("click", () => this.hideTitle(id))
-      debugger
     })
   }
 
