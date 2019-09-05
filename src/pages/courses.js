@@ -102,7 +102,7 @@ class Courses extends React.Component {
           </div>
           <div className="container">
             <div className="row">
-              <div className="col-sm-3">
+              <div className="col-xs-offset-1 col-xs-11 col-md-offset-0 col-md-12">
                 <h1 className="header-lg-black">Camp Schedule</h1>
               </div>
             </div>

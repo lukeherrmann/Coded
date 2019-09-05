@@ -10,13 +10,11 @@ import vrIcon from "../images/vr.png"
 import "../styles/main.sass"
 
 class SignUp extends React.Component {
-  state = { parent: true, pageHeader: "Parent" }
+  state = { parent: true }
 
   handleClick = () => {
-    if (this.state.parent === true)
-      this.setState({ parent: false, pageHeader: "Business" })
-    else if (this.state.parent === false)
-      this.setState({ parent: true, pageHeader: "Parent" })
+    if (this.state.parent === true) this.setState({ parent: false })
+    else if (this.state.parent === false) this.setState({ parent: true })
   }
 
   render() {
@@ -42,18 +40,19 @@ class SignUp extends React.Component {
               <div className="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-5">
                 <div className="padding-50-50">
                   <h1 className="header-lg-black">
-                    Sign Up - {this.state.pageHeader}
+                    Sign Up - {this.state.parent ? "Parent" : "Business"}
                   </h1>
                   <div className="padding-top-15">
                     <p onClick={this.handleClick} className="i-black">
-                      Not a {this.state.pageHeader}? Click Here!
+                      Not a {this.state.parent ? "Parent" : "Business"}? Click
+                      Here!
                     </p>
                   </div>
                 </div>
 
-                <div className="padding-20-20">
-                  <p className="p-black"> Select Camps of Interest</p>
-                </div>
+                <p className="p-black padding-20-20">
+                  Select Camp of Interest
+                </p>
                 <div className="padding-20-20">
                   <IconRadio />
                 </div>

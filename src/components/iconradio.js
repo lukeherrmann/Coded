@@ -14,7 +14,7 @@ class IconRadio extends React.Component {
     return (
       <form>
         <div className="row">
-          <div className="col-sm-1">
+          <div className="col-xs-offset-2 col-xs-2 col-md-offset-2">
             <label>
               <div className="center-items">
                 <div className="padding-bottom-5">
@@ -33,7 +33,7 @@ class IconRadio extends React.Component {
               </div>
             </label>
           </div>
-          <div className="col-sm-offset-1 col-sm-1">
+          <div className="col-xs-offset-1 col-xs-2">
             <label>
               <div className="center-items">
                 <div className="padding-bottom-5">
@@ -52,7 +52,7 @@ class IconRadio extends React.Component {
               </div>
             </label>
           </div>
-          <div className="col-sm-offset-1 col-sm-1">
+          <div className="col-xs-offset-1 col-xs-2">
             <label>
               <div className="center-items">
                 <div className="padding-bottom-5">

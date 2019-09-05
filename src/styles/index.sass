@@ -28,7 +28,8 @@
 .camp-options
   padding-top: 50px
   padding-bottom: 150px
-
+  +below($md)
+    padding-bottom: 50px
 .body-main
   position: relative
 
@@ -48,6 +49,15 @@
 
 .photo-section-2
   position: relative
+  +below($md)
+    display: none
+
+.photo-section-2-mobile
+  display: none
+  position: relative
+  +below($md)
+    display: flex
+    padding
 
 .photo-1
   margin-top: -38rem
@@ -136,6 +146,8 @@
   font-size: 4.5rem
   color: #4b4f52
   font-weight: bold
+  +below($md)
+    padding-left: 1rem
 
 .btn-med-white
   display: flex
@@ -303,9 +315,20 @@
   padding-top: 50px
   padding-bottom: 50px
 
+.mobile-padding-50-50
+  +below($md)
+    padding-top: 50px
+    padding-bottom: 50px
+
 .padding-35-35
   padding-top: 35px
   padding-bottom: 35px
+
+.padding-35-35-all
+  padding-top: 35px
+  padding-bottom: 35px
+  padding-right: 1rem
+  padding-left: 1rem
 
 .padding-20-20
   padding-top: 20px
@@ -485,7 +508,7 @@
 
 .body-text-spacing
   +below($md)
-    padding-top: 1.5rem
+    padding-top: 3.5rem
 
 .padding-top-30
   padding-top: 30px
@@ -517,23 +540,43 @@
   display: flex
 
 .hover-dot
-  height: 1rem
-  width: 1rem
-  background-color: #ffc545
+  background-image: repeating-radial-gradient(circle, 
+  #ffc545 0rem, 
+  #ffc545 .35rem,
+  #ffedcb .35rem,
+  #ffedcb 1.2rem,
+  $white 1.2rem,
+  $white 3rem)
+  height: 3rem
+  width: 3rem
   border-radius: 50%
-  display: inline-block
-  margin-left: -.48rem
+  margin-left: -1.5rem
+  +below($md)
+    margin-left: -.3rem
 
 .hover-font
   color: #ffc545
   font-size: 1rem
   font-weight: bold
+  padding-left: 1rem
+
+.hover-title
+  display: flex
+  flex-direction: row
 
 .hover-background
+  display: block
+  position: absolute
+  z-index: -1
+  width: 23.7%
   display: flex
-  position: relative
+  flex-direction: column
   background-color: #ffedcb
-  left: 2.5%
+  margin-top: -1.5rem
+  +below($md)
+    position: relative
+    width: 100%
+
 
 .partner-img
   text-align: center
@@ -550,3 +593,15 @@
 .menu-icon
   width: auto
   height: auto
+
+.tab-list-active 
+  color: #37cbc1
+  font-size: 2rem
+  font-weight: bold
+
+.center-mobile
+  +below($md)
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 4rem

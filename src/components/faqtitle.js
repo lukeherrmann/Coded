@@ -3,30 +3,36 @@ import React from "react"
 class FaqTitle extends React.Component {
   state = { displayTitle: false }
 
-  showTitle = (title, id) => {
-    this.props.getSection(title)
-    this.setState({ displayTitle: true }
-    )
+  componentDidMount(){
+    const data = this.props
   }
 
-  hideTitle = (id) => {
-    this.setState({ displayTitle: false }, () => {
-      document.getElementById(id).removeEventListener("click", () => this.hideTitle(id))
-    })
+  onClick = () => {
+    const { label, onClick} = this.props
+    onClick(label)
   }
 
   render() {
+    const {
+      onClick,
+      props: {
+        activeTab,
+        label
+      },
+    } = this
+
+    let className = 'p-black'
+
+    if (activeTab === label) {
+      className += ' tab-list-active'
+    }
     return (
       <>
         <h1
-          key={this.props.index}
-          id={this.props.index}
-          onClick={() => this.showTitle(this.props.title, this.props.index)}
-          className={`${
-            this.state.displayTitle ? "header-med-black" : "p-black"
-          } `}
+          className={className}
+          onClick={onClick}
         >
-          {this.props.title}
+          {label}
         </h1>
       </>
     )
