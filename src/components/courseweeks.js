@@ -12,16 +12,16 @@ class CourseWeeks extends React.Component {
               return weeks.week_selector.document.map((week, index) => {
                 return (
                   <>
-                    <div className="col-xxs-12 col-xs-12 col-md-1">
+                    <div className="col-xxs-12 col-xs-12 col-md-1 center-mobile">
                       <WeeksTitle
                         week_number={week.data.week_number}
                         index={index}
                       />
                     </div>
-                    <div className="col-xxs-12 col-xs-12 col-md-4">
+                    <div className="col-xxs-12 col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-4">
                       <WeeksDescription week={week} index={index} />
                     </div>
-                    <div className="week-info-block col-md-1" />
+                    <div className="week-info-block col-xs-1 col-md-1" />
                   </>
                 )
               })

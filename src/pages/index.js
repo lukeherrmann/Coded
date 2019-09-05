@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import FirstHoverDropdown from "../components/firsthoverdropdown"
 import Layout from "../components/layout"
 import "../styles/main.sass"
 import home1 from "../images/home_1.png"
@@ -78,12 +79,12 @@ class Index extends React.Component {
           <div className="container">
             <div className="camper-text-container">
               <div className="row">
-                <div className="col-xs-12 col-sm-2">
+                <div className="col-xs-12 col-sm-3">
                   <h3 className="header-med-white">NOW ACCEPTING</h3>
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12 col-sm-4">
+                <div className="col-xs-12 col-md-4">
                   <h1 className="header-xl-white">New Campers</h1>
                 </div>
               </div>
@@ -115,16 +116,18 @@ class Index extends React.Component {
         <img src={home1} className="photo-1" alt="header-home" />
 
         <div className="body-main">
-          <div className="section">
+          <div className="section mobile">
             <div className="camp-options">
               <div className="container">
                 <div className="row">
-                  <div className="col-xxs-12">
-                      <h1 className="header-lg-black padding-20-20">Camp Options</h1>
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-12">
+                    <h1 className="header-lg-black padding-20-20">
+                      Camp Options
+                    </h1>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-xxs-7 col-md-2">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-2">
                     <div className="body-text-spacing">
                       <div className="padding-15-15">
                         <img src={Web} alt="web-icon" />
@@ -138,7 +141,7 @@ class Index extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-2">
                     <div className="body-text-spacing">
                       <div className="padding-15-15">
                         <img src={App} alt="app-icon" />
@@ -154,7 +157,7 @@ class Index extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xxs-7 col-md-offset-1 col-md-2">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-2">
                     <div className="body-text-spacing">
                       <div className="padding-15-15">
                         <img src={VR} alt="vr-icon" />
@@ -170,29 +173,29 @@ class Index extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-offset-1 col-md-3">
+                  <div className="col-md-offset-1 col-md-3 mobile-padding-50-50">
                     <div className="row">
-                      <div className="col-xs-1">
-                        <div className="hover-dot" />
-                      </div>
-                      <div className="col-xs-11">
-                        <p className="hover-font">Grid System</p>
-                      </div>
-                    </div>
-                    <div className="hover-background row">
                       <div className="col-xs-12">
-                        <p className="padding-10-10">Desktop Computer</p>
-                        <p className="padding-10-10">
-                          Grids help websites adapt to different screen sizes.
-                          Checkout the horizontal lines. See how they change for
-                          different screens.
-                        </p>
-                        <p className="padding-10-10">Phone</p>
-                        <p className="padding-10-10">
-                          Mobile devices are often constrained by display size
-                          and require a different approach to how content is
-                          laid out on screen.
-                        </p>
+                        <div className="hover-title show-hover">
+                          <div className="hover-dot" />
+                          <p className="hover-font">Grid System</p>
+                        </div>
+                        <div className="hide-hover">
+                          <div className="hover-background padding-35-35-all">
+                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10">
+                              Grids help websites adapt to different screen
+                              sizes. Checkout the horizontal lines. See how they
+                              change for different screens.
+                            </p>
+                            <p className="padding-10-10">Phone</p>
+                            <p className="padding-10-10">
+                              Mobile devices are often constrained by display
+                              size and require a different approach to how
+                              content is laid out on screen.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -200,6 +203,7 @@ class Index extends React.Component {
               </div>
             </div>
           </div>
+
           <div className="photo-section-1">
             <div className="blue-square-1" />
             <div className="gray-sq-right" />
@@ -208,7 +212,7 @@ class Index extends React.Component {
                 <div className="col-xs-12 col-sm-9 col-lg-10">
                   <img src={home2} alt="home-body-1" className="img-2" />
                 </div>
-                <div className="col-xs-12 col-sm-3 col-lg-2">
+                <div className="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-3 col-lg-2 mobile-padding-50-50">
                   <h6 className="body-blue-text">
                     {mini_title_pic_right.text}
                   </h6>
@@ -222,11 +226,17 @@ class Index extends React.Component {
               </div>
             </div>
           </div>
-          <div className="section">
+
+          <div className="section mobile">
             <div className="container">
+              <div className="row show-mobile mobile-padding-50-50">
+                <div className="col-xs-12">
+                  <FirstHoverDropdown />
+                </div>
+              </div>
               <div className="our-vision">
                 <div className="row middle-xs">
-                  <div className="col-xs-2 col-sm-1">
+                  <div className="col-xs-offset-1 col-xs-2 col-md-offset-0 col-md-1 ">
                     <img src={Vision} alt="vision-icon" />
                   </div>
                   <div className="col-xs-4 col-sm-4">
@@ -234,59 +244,59 @@ class Index extends React.Component {
                   </div>
                 </div>
                 <div className="row middle-xs">
-                  <div className="col-xs-12 col-sm-8">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-7">
                     <div className="padding-50-50">
                       <h2 className="header-med-black">{main_quote_1.text}</h2>
                     </div>
                   </div>
+                  <div className="col-md-offset-2 col-md-3 hide-mobile">
+                    <div className="row">
+                      <div className="col-xs-12">
+                        <div className="hover-title show-hover">
+                          <div className="hover-dot" />
+                          <p className="hover-font">Grid System</p>
+                        </div>
+                        <div className="hide-hover">
+                          <div className="hover-background padding-35-35-all">
+                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10">
+                              Grids help websites adapt to different screen
+                              sizes. Checkout the horizontal lines. See how they
+                              change for different screens.
+                            </p>
+                            <p className="padding-10-10">Phone</p>
+                            <p className="padding-10-10">
+                              Mobile devices are often constrained by display
+                              size and require a different approach to how
+                              content is laid out on screen.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="row top-xs">
-                  <div className="col-xxs-7 col-md-2">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-2">
                     <p className="body-text-spacing p-black">
                       {sec_2_subquote_1.text}
                     </p>
                   </div>
-                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-2">
                     <p className="body-text-spacing p-black">
                       {sec_2_subquote_2.text}
                     </p>
                   </div>
-                  <div className="col-md-offset-1 col-xxs-7 col-md-2">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-2">
                     <p className="body-text-spacing p-black">
                       {sec_2_subquote_3.text}
                     </p>
-                  </div>
-                  <div className="col-md-offset-1 col-md-3">
-                    <div className="row">
-                      <div className="col-xs-1">
-                        <div className="hover-dot" />
-                      </div>
-                      <div className="col-xs-11">
-                        <p className="hover-font">Grid System</p>
-                      </div>
-                    </div>
-                    <div className="hover-background row">
-                      <div className="col-xs-12">
-                        <p className="padding-10-10">Desktop Computer</p>
-                        <p className="padding-10-10">
-                          Grids help websites adapt to different screen sizes.
-                          Checkout the horizontal lines. See how they change for
-                          different screens.
-                        </p>
-                        <p className="padding-10-10">Phone</p>
-                        <p className="padding-10-10">
-                          Mobile devices are often constrained by display size
-                          and require a different approach to how content is
-                          laid out on screen.
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
                 <div className="padding-50-50">
                   <div className="row">
-                    <div className="col-sm-12">
+                    <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-12">
                       <div className="btn-center">
                         <Link to="/aboutus/">
                           <div>
@@ -300,6 +310,7 @@ class Index extends React.Component {
               </div>
             </div>
           </div>
+
           <div className="photo-section-2">
             <div className="blue-square-2" />
             <div className="gray-sq-left" />
@@ -319,75 +330,119 @@ class Index extends React.Component {
             </div>
           </div>
 
+          <div className="photo-section-2-mobile">
+            <div className="gray-sq-right" />
+            <div className="container">
+              <div className="row middle-xs">
+                <div className="col-xs-12 col-sm-9 col-lg-10">
+                  <img src={home3} alt="home-body-1" className="img-2" />
+                </div>
+                <div className="col-xs-offset-1 col-xs-8 col-sm-offset-0 col-sm-3 col-lg-2 padding-50-50">
+                  <h6 className="body-blue-text">{mini_title_pic_left.text}</h6>
+                  <div className="padding-20-20">
+                    <h1 className="header-lg-black-wrap">
+                      {pic_title_left.text}
+                    </h1>
+                  </div>
+                  <p className="p-black">{pic_left_desc.text}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="section">
             <div className="container">
               <div className="testimonials">
                 <div className="row middle-sm">
-                  <div className="col-sm-1">
+                  <div className="col-xs-offset-1 col-xs-1 col-md-offset-0 col-md-1">
                     <img src={Testimonials} alt="testimonial-icon" />
                   </div>
-                  <div className="col-sm-2">
+                  <div className="col-xs-offset-1 col-xs-9 col-md-offset-0">
                     <div className="header-lg-black">
                       <h2>{section_3_title.text}</h2>
                     </div>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-xxs-8 col-md-7">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-7">
                     <div className="padding-50-50">
                       <h2 className="header-med-black">
                         "{main_testimonial.text}"
                       </h2>
                     </div>
                   </div>
+                  <div className="col-md-offset-2 col-md-3 hide-mobile">
+                    <div className="row">
+                      <div className="col-xs-12">
+                        <div className="hover-title show-hover">
+                          <div className="hover-dot" />
+                          <p className="hover-font">Grid System</p>
+                        </div>
+                        <div className="hide-hover">
+                          <div className="hover-background padding-35-35-all">
+                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10">
+                              Grids help websites adapt to different screen
+                              sizes. Checkout the horizontal lines. See how they
+                              change for different screens.
+                            </p>
+                            <p className="padding-10-10">Phone</p>
+                            <p className="padding-10-10">
+                              Mobile devices are often constrained by display
+                              size and require a different approach to how
+                              content is laid out on screen.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="row">
-                  <div className="col-xs-12 col-md-3">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
                     <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_1.text}"</p>
                     </div>
                   </div>
-                  <div className="col-xs-12 col-md-3">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
                     <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_2.text}"</p>
                     </div>
                   </div>
-                  <div className="col-xs-12  col-md-3">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
                     <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_3.text}"</p>
                     </div>
                   </div>
-                  <div className="col-md-3">
-                    <div className="row">
-                      <div className="col-xs-1">
-                        <div className="hover-dot" />
-                      </div>
-                      <div className="col-xs-11">
-                        <p className="hover-font">Grid System</p>
-                      </div>
-                    </div>
-                    <div className="hover-background row">
-                      <div className="col-xs-12">
-                        <p className="padding-10-10">Desktop Computer</p>
-                        <p className="padding-10-10">
-                          Grids help websites adapt to different screen sizes.
-                          Checkout the horizontal lines. See how they change for
-                          different screens.
-                        </p>
-                        <p className="padding-10-10">Phone</p>
-                        <p className="padding-10-10">
-                          Mobile devices are often constrained by display size
-                          and require a different approach to how content is
-                          laid out on screen.
-                        </p>
-                      </div>
+                </div>
+              </div>
+              <div className="row show-mobile mobile-padding-50-50">
+                <div className="col-xs-12">
+                  <div className="hover-title">
+                    <div className="hover-dot" />
+                    <p className="hover-font">Grid System</p>
+                  </div>
+                  <div className="hide-hover">
+                    <div className="hover-background padding-35-35-all">
+                      <p className="padding-10-10">Desktop Computer</p>
+                      <p className="padding-10-10">
+                        Grids help websites adapt to different screen sizes.
+                        Checkout the horizontal lines. See how they change for
+                        different screens.
+                      </p>
+                      <p className="padding-10-10">Phone</p>
+                      <p className="padding-10-10">
+                        Mobile devices are often constrained by display size and
+                        require a different approach to how content is laid out
+                        on screen.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="section">
+          <div className="section mobile">
             <div className="container">
               <div className="row center-xs">
                 <div className="padding-20-20">
@@ -405,7 +460,7 @@ class Index extends React.Component {
                     <Link
                       className="link"
                       to="/signup"
-                      state={{ form: "parents" }}
+                      state={{ form: "Parent" }}
                     >
                       <div className="box-shadow">
                         <div className="box-shadow-text">
@@ -419,7 +474,7 @@ class Index extends React.Component {
                     <Link
                       className="link"
                       to="/signup"
-                      state={{ form: "business" }}
+                      state={{ form: "Business" }}
                     >
                       <div className="box-shadow">
                         <div className="box-shadow-text">
@@ -439,7 +494,7 @@ class Index extends React.Component {
             <div className="row center-xs">
               <h2 className="header-lg-gray padding-20-20">Our Partners</h2>
             </div>
-            <div className="row between-xs padding-20-20">
+            <div className="row middle-xs padding-20-20">
               <div className="col-xs">
                 <img className="partner-img" src={Microsoft} alt="microsoft" />
               </div>

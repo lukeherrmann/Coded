@@ -3,41 +3,45 @@ import FaqQuestions from "../components/faqquestions"
 import FaqTitle from "./faqtitle"
 
 class FaqSections extends React.Component {
-  state = { selectedSection: "" }
+  state = { activeTab: "" }
 
-  componentDidMount(){
+  componentDidMount() {
     const sec = this.props.data[0]
     const secTitle = sec.data.section_title.text
-    this.setState({ selectedSection: secTitle})
+    this.setState({ activeTab: secTitle })
   }
 
-  setSection = (section) => {
-    this.setState({ selectedSection: section })
+  onClickTabItem = tab => {
+    this.setState({ activeTab: tab })
+    debugger
   }
 
   render() {
     return (
       <>
         <div className="container">
-          <div className="row bottom-xs">
+          <div className="row bottom-xs tabs">
             {this.props.data.map((section, index) => {
+              const label = section.data.section_title.text
+              debugger
               return (
-                <div className="col-sm-1">
+                <div className="col-xs-3 col-sm-2 col-md-1">
                   <FaqTitle
-                    title={section.data.section_title.text}
-                    index={index}
-                    getSection={this.setSection}
+                    activeTab={this.state.activeTab}
+                    key={label}
+                    label={label}
+                    onClick={this.onClickTabItem}
                   />
                 </div>
               )
             })}
           </div>
         </div>
-        <div className="row">
-
-        </div>
         <div className="padding-35-35">
-          <FaqQuestions sections={this.props.data} selectedSection={this.state.selectedSection} />
+          <FaqQuestions
+            sections={this.props.data}
+            selectedSection={this.state.activeTab}
+          />
         </div>
       </>
     )
