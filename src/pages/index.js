@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import FirstHoverDropdown from "../components/firsthoverdropdown"
 import Layout from "../components/layout"
 import "../styles/main.sass"
 import home1 from "../images/home_1.png"
@@ -175,23 +176,25 @@ class Index extends React.Component {
                   <div className="col-md-offset-1 col-md-3 mobile-padding-50-50">
                     <div className="row">
                       <div className="col-xs-12">
-                        <div className="hover-title">
+                        <div className="hover-title show-hover">
                           <div className="hover-dot" />
                           <p className="hover-font">Grid System</p>
                         </div>
-                        <div className="hover-background padding-35-35-all">
-                          <p className="padding-10-10">Desktop Computer</p>
-                          <p className="padding-10-10">
-                            Grids help websites adapt to different screen sizes.
-                            Checkout the horizontal lines. See how they change
-                            for different screens.
-                          </p>
-                          <p className="padding-10-10">Phone</p>
-                          <p className="padding-10-10">
-                            Mobile devices are often constrained by display size
-                            and require a different approach to how content is
-                            laid out on screen.
-                          </p>
+                        <div className="hide-hover">
+                          <div className="hover-background padding-35-35-all">
+                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10">
+                              Grids help websites adapt to different screen
+                              sizes. Checkout the horizontal lines. See how they
+                              change for different screens.
+                            </p>
+                            <p className="padding-10-10">Phone</p>
+                            <p className="padding-10-10">
+                              Mobile devices are often constrained by display
+                              size and require a different approach to how
+                              content is laid out on screen.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -228,24 +231,7 @@ class Index extends React.Component {
             <div className="container">
               <div className="row show-mobile mobile-padding-50-50">
                 <div className="col-xs-12">
-                  <div className="hover-title">
-                    <div className="hover-dot" />
-                    <p className="hover-font">Grid System</p>
-                  </div>
-                  <div className="hover-background padding-35-35-all">
-                    <p className="padding-10-10">Desktop Computer</p>
-                    <p className="padding-10-10">
-                      Grids help websites adapt to different screen sizes.
-                      Checkout the horizontal lines. See how they change for
-                      different screens.
-                    </p>
-                    <p className="padding-10-10">Phone</p>
-                    <p className="padding-10-10">
-                      Mobile devices are often constrained by display size and
-                      require a different approach to how content is laid out on
-                      screen.
-                    </p>
-                  </div>
+                  <FirstHoverDropdown />
                 </div>
               </div>
               <div className="our-vision">
@@ -266,23 +252,25 @@ class Index extends React.Component {
                   <div className="col-md-offset-2 col-md-3 hide-mobile">
                     <div className="row">
                       <div className="col-xs-12">
-                        <div className="hover-title">
+                        <div className="hover-title show-hover">
                           <div className="hover-dot" />
                           <p className="hover-font">Grid System</p>
                         </div>
-                        <div className="hover-background padding-35-35-all">
-                          <p className="padding-10-10">Desktop Computer</p>
-                          <p className="padding-10-10">
-                            Grids help websites adapt to different screen sizes.
-                            Checkout the horizontal lines. See how they change
-                            for different screens.
-                          </p>
-                          <p className="padding-10-10">Phone</p>
-                          <p className="padding-10-10">
-                            Mobile devices are often constrained by display size
-                            and require a different approach to how content is
-                            laid out on screen.
-                          </p>
+                        <div className="hide-hover">
+                          <div className="hover-background padding-35-35-all">
+                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10">
+                              Grids help websites adapt to different screen
+                              sizes. Checkout the horizontal lines. See how they
+                              change for different screens.
+                            </p>
+                            <p className="padding-10-10">Phone</p>
+                            <p className="padding-10-10">
+                              Mobile devices are often constrained by display
+                              size and require a different approach to how
+                              content is laid out on screen.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -366,10 +354,10 @@ class Index extends React.Component {
             <div className="container">
               <div className="testimonials">
                 <div className="row middle-sm">
-                  <div className="col-sm-offset-1 col-sm-1">
+                  <div className="col-xs-offset-1 col-xs-1 col-md-offset-0 col-md-1">
                     <img src={Testimonials} alt="testimonial-icon" />
                   </div>
-                  <div className="col-xs-offset-1 col-xs-9">
+                  <div className="col-xs-offset-1 col-xs-9 col-md-offset-0">
                     <div className="header-lg-black">
                       <h2>{section_3_title.text}</h2>
                     </div>
@@ -386,23 +374,25 @@ class Index extends React.Component {
                   <div className="col-md-offset-2 col-md-3 hide-mobile">
                     <div className="row">
                       <div className="col-xs-12">
-                        <div className="hover-title">
+                        <div className="hover-title show-hover">
                           <div className="hover-dot" />
                           <p className="hover-font">Grid System</p>
                         </div>
-                        <div className="hover-background padding-35-35-all">
-                          <p className="padding-10-10">Desktop Computer</p>
-                          <p className="padding-10-10">
-                            Grids help websites adapt to different screen sizes.
-                            Checkout the horizontal lines. See how they change
-                            for different screens.
-                          </p>
-                          <p className="padding-10-10">Phone</p>
-                          <p className="padding-10-10">
-                            Mobile devices are often constrained by display size
-                            and require a different approach to how content is
-                            laid out on screen.
-                          </p>
+                        <div className="hide-hover">
+                          <div className="hover-background padding-35-35-all">
+                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10">
+                              Grids help websites adapt to different screen
+                              sizes. Checkout the horizontal lines. See how they
+                              change for different screens.
+                            </p>
+                            <p className="padding-10-10">Phone</p>
+                            <p className="padding-10-10">
+                              Mobile devices are often constrained by display
+                              size and require a different approach to how
+                              content is laid out on screen.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -432,19 +422,21 @@ class Index extends React.Component {
                     <div className="hover-dot" />
                     <p className="hover-font">Grid System</p>
                   </div>
-                  <div className="hover-background padding-35-35-all">
-                    <p className="padding-10-10">Desktop Computer</p>
-                    <p className="padding-10-10">
-                      Grids help websites adapt to different screen sizes.
-                      Checkout the horizontal lines. See how they change for
-                      different screens.
-                    </p>
-                    <p className="padding-10-10">Phone</p>
-                    <p className="padding-10-10">
-                      Mobile devices are often constrained by display size and
-                      require a different approach to how content is laid out on
-                      screen.
-                    </p>
+                  <div className="hide-hover">
+                    <div className="hover-background padding-35-35-all">
+                      <p className="padding-10-10">Desktop Computer</p>
+                      <p className="padding-10-10">
+                        Grids help websites adapt to different screen sizes.
+                        Checkout the horizontal lines. See how they change for
+                        different screens.
+                      </p>
+                      <p className="padding-10-10">Phone</p>
+                      <p className="padding-10-10">
+                        Mobile devices are often constrained by display size and
+                        require a different approach to how content is laid out
+                        on screen.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

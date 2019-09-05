@@ -66,7 +66,7 @@
   right: 0
   +below($lg)
     position: relative
-    margin-top: -8rem
+    margin-top: -12rem
     right: 0
     width: 100%
     height: auto
@@ -539,6 +539,8 @@
 .show
   display: flex
 
+
+
 .hover-dot
   background-image: repeating-radial-gradient(circle, 
   #ffc545 0rem, 
@@ -551,14 +553,33 @@
   width: 3rem
   border-radius: 50%
   margin-left: -1.5rem
-  +below($md)
-    margin-left: -.3rem
+
+.hover-dot-click
+  background-image: repeating-radial-gradient(circle, 
+  #ffc545 0rem, 
+  #ffc545 .35rem,
+  #ffedcb .35rem,
+  #ffedcb 1.2rem,
+  $white 1.2rem,
+  $white 3rem)
+  height: 3rem
+  width: 3rem
+  border-radius: 50%
+  margin-left: -.3rem
+
+
+.hover-dot:hover + p
+  margin-top: 0rem
 
 .hover-font
   color: #ffc545
   font-size: 1rem
   font-weight: bold
   padding-left: 1rem
+  margin-top: 1rem
+
+.hover-font:hover
+  margin-top: 0rem
 
 .hover-title
   display: flex
@@ -577,6 +598,11 @@
     position: relative
     width: 100%
 
+.hide-hover
+  display: none
+
+.show-hover:hover + div
+  display: flex
 
 .partner-img
   text-align: center
