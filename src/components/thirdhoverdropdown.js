@@ -1,6 +1,6 @@
 import React from "react"
 
-class FirstHoverDropdown extends React.Component {
+class ThirdHoverDropdown extends React.Component {
   state = { displayHover: false }
 
   handleClick = () => {
@@ -36,4 +36,4 @@ class FirstHoverDropdown extends React.Component {
   }
 }
 
-export default FirstHoverDropdown
+export default ThirdHoverDropdown

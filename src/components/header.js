@@ -32,7 +32,7 @@ class Header extends React.Component {
                 <p>About Us</p>
               </Link>
             </div>
-            <div className="col-xxs-4 col-xs-offset-3 col-xs-1 col-sm-offset-6 col-sm-1 show-dropdown">
+            <div className="col-xxs-offset-2 col-xxs-1 col-xs-offset-3 col-xs-1 col-sm-offset-6 col-sm-1 show-dropdown">
               <img
                 onClick={this.showDropdown}
                 src={menuIcon}
@@ -46,7 +46,7 @@ class Header extends React.Component {
               this.state.displayMenu ? "show" : "hide"
             }`}
           >
-            <div className="col-xs-12 padding-35-35 show-dropdown">
+            <div className="col-xxs-12 padding-35-35 show-dropdown">
               <Link to="/courses/">
                 <h1 className="header-lg-blue show-dropdown">Our Courses</h1>
               </Link>

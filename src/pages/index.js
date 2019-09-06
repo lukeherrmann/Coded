@@ -2,6 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import FirstHoverDropdown from "../components/firsthoverdropdown"
+import SecondHoverDropdown from "../components/secondhoverdropdown"
+import ThirdHoverDropdown from "../components/thirdhoverdropdown"
 import Layout from "../components/layout"
 import "../styles/main.sass"
 import home1 from "../images/home_1.png"
@@ -57,20 +59,20 @@ class Index extends React.Component {
         <div className="gradient-sq-top">
           <div className="container">
             <div className="row">
-              <div className="col-xs-3">
+              <div className="col-xxs-3 col-xs-3">
                 <div className="line-white" />
               </div>
-              <div className="col-xs-3">
+              <div className="col-xxs-3 col-xs-3">
                 <div className="line-white" />
               </div>
-              <div className="col-xs-3">
+              <div className="col-xxs-3 col-xs-3">
                 <div className="line-white" />
               </div>
-              <div className="col-xs-3">
+              <div className="col-xxs-3 col-xs-3">
                 <div className="line-white" />
               </div>
               <div className="row end-xs">
-                <div className="col-xs-12">
+                <div className="col-xxs-12 col-xs-12">
                   <div className="line-white" />
                 </div>
               </div>
@@ -173,7 +175,7 @@ class Index extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-offset-1 col-md-3 mobile-padding-50-50">
+                  <div className="col-md-offset-1 col-md-3 mobile-padding-50-50 hide-mobile">
                     <div className="row">
                       <div className="col-xs-12">
                         <div className="hover-title show-hover">
@@ -198,6 +200,11 @@ class Index extends React.Component {
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div className="row show-mobile mobile-padding-50-50">
+                  <div className="col-xs-12">
+                    <FirstHoverDropdown />
                   </div>
                 </div>
               </div>
@@ -231,7 +238,7 @@ class Index extends React.Component {
             <div className="container">
               <div className="row show-mobile mobile-padding-50-50">
                 <div className="col-xs-12">
-                  <FirstHoverDropdown />
+                  <SecondHoverDropdown />
                 </div>
               </div>
               <div className="our-vision">
@@ -418,45 +425,26 @@ class Index extends React.Component {
               </div>
               <div className="row show-mobile mobile-padding-50-50">
                 <div className="col-xs-12">
-                  <div className="hover-title">
-                    <div className="hover-dot" />
-                    <p className="hover-font">Grid System</p>
-                  </div>
-                  <div className="hide-hover">
-                    <div className="hover-background padding-35-35-all">
-                      <p className="padding-10-10">Desktop Computer</p>
-                      <p className="padding-10-10">
-                        Grids help websites adapt to different screen sizes.
-                        Checkout the horizontal lines. See how they change for
-                        different screens.
-                      </p>
-                      <p className="padding-10-10">Phone</p>
-                      <p className="padding-10-10">
-                        Mobile devices are often constrained by display size and
-                        require a different approach to how content is laid out
-                        on screen.
-                      </p>
-                    </div>
-                  </div>
+                  <ThirdHoverDropdown />
                 </div>
               </div>
             </div>
           </div>
           <div className="section mobile">
             <div className="container">
-              <div className="row center-xs">
-                <div className="padding-20-20">
-                  <h2 className="header-lg-black">Find A Camp</h2>
+              <div className="row">
+                <div className="col-xxs-12 center-items">
+                  <h2 className="header-lg-black padding-20-20">Find A Camp</h2>
                 </div>
               </div>
-              <div className="row center-xs">
-                <div className="p-black">
-                  <p>Are you a parent or a business?</p>
+              <div className="row">
+                <div className="col-xxs-12 center-items">
+                  <p className="p-black">Are you a Parent or a Business?</p>
                 </div>
               </div>
               <div className="padding-50-50">
                 <div className="row between-sm">
-                  <div className="col-xs-12 col-md-5 boxes">
+                  <div className="col-xxs-12 col-md-5 boxes">
                     <Link
                       className="link"
                       to="/signup"
@@ -491,29 +479,29 @@ class Index extends React.Component {
         </div>
         <div className="gray-partner-container">
           <div className="container padding-50-50">
-            <div className="row center-xs">
+            <div className="row center-xxs">
               <h2 className="header-lg-gray padding-20-20">Our Partners</h2>
             </div>
-            <div className="row middle-xs padding-20-20">
-              <div className="col-xs">
+            <div className="row middle-xxs padding-20-20">
+              <div className="col-xxs">
                 <img className="partner-img" src={Microsoft} alt="microsoft" />
               </div>
-              <div className="col-xs">
+              <div className="col-xxs">
                 <img className="partner-img" src={Jazz} alt="jazz" />
               </div>
-              <div className="col-xs">
+              <div className="col-xxs">
                 <img className="partner-img" src={Utah} alt="utah" />
               </div>
-              <div className="col-xs">
+              <div className="col-xxs">
                 <img className="partner-img" src={Fuze} alt="fuze" />
               </div>
-              <div className="col-xs">
+              <div className="col-xxs">
                 <img className="partner-img" src={Stars} alt="stars" />
               </div>
-              <div className="col-xs">
+              <div className="col-xxs">
                 <img className="partner-img" src={Bees} alt="bees" />
               </div>
-              <div className="col-xs">
+              <div className="col-xxs">
                 <img className="partner-img" src={firstStar} alt="firststar" />
               </div>
             </div>

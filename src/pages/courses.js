@@ -35,7 +35,7 @@ class Courses extends React.Component {
                   </div>
                   <form>
                     <div className="row around-xs">
-                      <div className="col-xs-1">
+                      <div className="col-xxs">
                         <label className="course-label">
                           <img src={webGrey} alt="web-icon-gray" />
                           <h3 className="header-sm-black padding-10-10">Web</h3>
@@ -48,7 +48,7 @@ class Courses extends React.Component {
                           />
                         </label>
                       </div>
-                      <div className="col-xs-1">
+                      <div className="col-xxs">
                         <label className="course-label">
                           <img src={appGrey} alt="app-icon-gray" />
                           <h3 className="header-sm-black padding-10-10">App</h3>
@@ -61,7 +61,7 @@ class Courses extends React.Component {
                           />
                         </label>
                       </div>
-                      <div className="col-xs-1">
+                      <div className="col-xxs">
                         <label className="course-label">
                           <img src={vrGrey} alt="vr-icon-gray" />
                           <h3 className="header-sm-black padding-10-10">VR</h3>

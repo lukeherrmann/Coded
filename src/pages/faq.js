@@ -11,7 +11,7 @@ class Faq extends React.Component {
           <div className="section">
             <div className="container">
               <div className="row">
-                <div className="col-sm-offset-3 col-sm-9">
+                <div className="col-xxs-offset-1 col-sm-offset-3 col-sm-9">
                   <h1 className="header-lg-black">FAQ</h1>
                 </div>
               </div>
@@ -19,7 +19,7 @@ class Faq extends React.Component {
             <div className="padding-50-50">
               <div className="container">
                 <div className="row">
-                  <div className="col-sm-offset-3">
+                  <div className="col-xxs-offset-1 col-sm-offset-3">
                     <FaqSections
                       data={this.props.data.allPrismicFaqSection.nodes}
                     />
