@@ -65,15 +65,15 @@
   z-index: 2
   right: 0
   +below($lg)
-    position: relative
-    margin-top: -12rem
-    right: 0
-    width: 100%
-    height: auto
+    display: none
 
-    
-
-.course-form
+.photo-1-mobile 
+  display: block
+  width: 100%
+  height: auto
+  +below($lg)
+    margin-top: -10rem
+ 
   display: flex
 
 .footer-container
@@ -110,11 +110,29 @@
   +below($md)
     display: none
 
+.header-font
+  color: #2A8BBF
+
 .show-dropdown
   display: none
   +below($md)
     display: flex
     flex-direction: column
+
+.mobile-dropdown
+  position: fixed
+  overflow: hidden
+  z-index: 4
+
+.blue-background
+  background: #2b91bf
+  height: 65vh
+  width: 100vw
+
+.white-background
+  background: $white
+  height: 35vh
+  width: 100vw
 
 .link
   color: #232424
@@ -250,6 +268,7 @@
     font-size: 1.5rem
  
 .link-blue
+  color: #2b91c0
   padding-top: 20px
 
 .blue-square-1
@@ -543,6 +562,8 @@
 
 
 
+
+
 .hover-dot
   background-image: repeating-radial-gradient(circle, 
   #ffc545 0rem, 
@@ -628,6 +649,11 @@
   +below($md)
     display: flex
 
+.show-mobile-lg
+  display: none
+  +below($lg)
+    display: flex
+
 .menu-icon
   width: 100%
   height: auto
@@ -644,3 +670,18 @@
     justify-content: center
     align-items: center
     padding-top: 4rem
+
+.fixed
+  position: fixed
+  z-index: 99
+  width: 100%
+
+.header-quote-font
+  color: #fffbfa
+  opacity: .4
+  font-size: 3rem
+
+.header-quote-font-sm
+  color: #fffbfa
+  opacity: .4
+  font-size: 1.5rem

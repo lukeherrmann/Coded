@@ -81,22 +81,22 @@ class Index extends React.Component {
           <div className="container">
             <div className="camper-text-container">
               <div className="row">
-                <div className="col-xs-12 col-sm-3">
+                <div className="col-xs-12 col-sm-6">
                   <h3 className="header-med-white">NOW ACCEPTING</h3>
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12 col-md-4">
+                <div className="col-xxs-6 col-md-4">
                   <h1 className="header-xl-white">New Campers</h1>
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12 col-sm-4">
+                <div className="col-xs-12 col-sm-6">
                   <p className="header-med-white">Creative Techology Camp</p>
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12 col-sm-4">
+                <div className="col-xs-12 col-sm-6">
                   <p className="header-med-white">
                     Classes in apps, web, and VR
                   </p>
@@ -116,6 +116,15 @@ class Index extends React.Component {
         </div>
 
         <img src={home1} className="photo-1" alt="header-home" />
+
+
+        <div className="container show-mobile-lg">
+          <div className="row">
+            <div className="col-xxs-12">
+              <img src={home1} className="photo-1-mobile" alt="header-home" />
+            </div>
+          </div>
+        </div>
 
         <div className="body-main">
           <div className="section mobile">
@@ -215,6 +224,9 @@ class Index extends React.Component {
             <div className="blue-square-1" />
             <div className="gray-sq-right" />
             <div className="container">
+              <div className="row">
+                <div className="col-xs-3"></div>
+              </div>
               <div className="row middle-xs">
                 <div className="col-xs-12 col-sm-9 col-lg-10">
                   <img src={home2} alt="home-body-1" className="img-2" />
