@@ -66,7 +66,7 @@ class Header extends React.Component {
               this.state.displayMenu ? "show" : "hide"
             }`}
           >
-            <div className="row center-xxs show-dropdown">
+            <div className="row top-xxs show-dropdown">
               <div className="col-xxs-offset-1 col-xxs-10 padding-35-35 show-dropdown">
                 <p className="header-quote-font">"The most disastrous thing that you can ever learn is your first programing languages"</p>
                 <p className="header-quote-font-sm padding-20-20"> - Alan Kay</p>
