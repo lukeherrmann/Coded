@@ -22,7 +22,17 @@ class Forms extends React.Component {
   render() {
     return (
       <div>
-        <form className="signup-forms" onSubmit={this.handleSubmit}>
+        <form
+          id="parent-signup"
+          name="parent-signup"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          className="signup-forms"
+          onSubmit={this.handleSubmit}
+        >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <div className="padding-20-20">
             <input
               className="form-underline"
@@ -70,7 +80,9 @@ class Forms extends React.Component {
                     checked={this.state.selectedOption === "month"}
                     onChange={this.handleRadio}
                   />
-                  <p className="p-black padding-left">Month Program - $999.00</p>
+                  <p className="p-black padding-left">
+                    Month Program - $999.00
+                  </p>
                 </label>
               </div>
               <div className="col-xs-6">
@@ -93,11 +105,11 @@ class Forms extends React.Component {
             </p>
           </div>
           <div className="padding-20-20">
-            <div className="btn-blue-sm">
+            <button type="submit" form="parent-signup" className="btn-blue-sm">
               <div className="btn-text-white">
                 <h5>Sign Up</h5>
               </div>
-            </div>
+            </button>
           </div>
         </form>
       </div>

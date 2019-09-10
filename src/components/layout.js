@@ -8,14 +8,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div>
+      <div className="whole-app">
         <div className="lines">
           <div className="container">
-            <div className="line-grey" />
-            <div className="line-grey" />
-            <div className="line-grey" />
-            <div className="line-grey" />
-            <div className="line-grey" />
+            <div className="line-grey" id="body-lines" />
+            <div className="line-grey" id="body-lines" />
+            <div className="line-grey" id="body-lines" />
+            <div className="line-grey" id="body-lines" />
+            <div className="line-grey" id="body-lines" />
           </div>
         </div>
         <main>{children}</main>

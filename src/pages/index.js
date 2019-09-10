@@ -494,7 +494,7 @@ class Index extends React.Component {
             <div className="row center-xxs">
               <h2 className="header-lg-gray padding-20-20">Our Partners</h2>
             </div>
-            <div className="row middle-xxs padding-20-20">
+            <div className="row middle-xxs padding-20-20 icons">
               <div className="col-xxs">
                 <img className="partner-img" src={Microsoft} alt="microsoft" />
               </div>

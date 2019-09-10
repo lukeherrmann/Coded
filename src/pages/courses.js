@@ -2,19 +2,18 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import CourseType from "../components/coursetype"
+import CoursesTabs from "../components/coursestabs"
 import Layout from "../components/layout"
 import CourseWeeks from "../components/courseweeks"
 import "../styles/main.sass"
-import webGrey from "../images/webGrey.png"
-import appGrey from "../images/appGrey.png"
-import vrGrey from "../images/vrGrey.png"
+
 import Img from "../images/coursesimage.png"
 
 class Courses extends React.Component {
   state = { selectedOption: "Web" }
 
-  handleChange = changeEvent => {
-    this.setState({ selectedOption: changeEvent.target.value })
+  handleChange = tab => {
+    this.setState({ selectedOption: tab })
   }
 
   render() {
@@ -33,49 +32,11 @@ class Courses extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <form>
-                    <div className="row around-xs">
-                      <div className="col-xxs">
-                        <label className="course-label">
-                          <img src={webGrey} alt="web-icon-gray" />
-                          <h3 className="header-sm-black padding-10-10">Web</h3>
-                          <input
-                            type="radio"
-                            name="courseType"
-                            value="Web"
-                            checked={this.state.selectedOption === "Web"}
-                            onChange={this.handleChange}
-                          />
-                        </label>
-                      </div>
-                      <div className="col-xxs">
-                        <label className="course-label">
-                          <img src={appGrey} alt="app-icon-gray" />
-                          <h3 className="header-sm-black padding-10-10">App</h3>
-                          <input
-                            type="radio"
-                            name="courseType"
-                            value="App"
-                            checked={this.state.selectedOption === "App"}
-                            onChange={this.handleChange}
-                          />
-                        </label>
-                      </div>
-                      <div className="col-xxs">
-                        <label className="course-label">
-                          <img src={vrGrey} alt="vr-icon-gray" />
-                          <h3 className="header-sm-black padding-10-10">VR</h3>
-                          <input
-                            type="radio"
-                            name="courseType"
-                            value="VR"
-                            checked={this.state.selectedOption === "VR"}
-                            onChange={this.handleChange}
-                          />
-                        </label>
-                      </div>
+                  <div className="row between-xxs">
+                    <div className="col-xxs-12">
+                        <CoursesTabs handleChange={this.handleChange} />
                     </div>
-                  </form>
+                  </div>
 
                   <CourseType
                     data={this.props.data.allPrismicCourses.nodes}
