@@ -1,10 +1,10 @@
 import React from "react"
 
 class ThirdHoverDropdown extends React.Component {
-  state = { displayHover: false }
+  state = { displayHover: false , tag: "<h1>"}
 
   handleClick = () => {
-    this.setState({ displayHover: !this.state.displayHover})
+    this.setState({ displayHover: !this.state.displayHover })
   }
 
   render() {
@@ -12,23 +12,23 @@ class ThirdHoverDropdown extends React.Component {
       <>
         <div className="hover-title">
           <div className="hover-dot-click" onClick={this.handleClick} />
-          <p className={`${this.state.displayHover ? "hover-font-move" : ""} hover-font-mobile`}>Grid System</p>
+          <p
+            className={`${
+              this.state.displayHover ? "hover-font-move" : ""
+            } hover-font-mobile`}
+          >
+            Grid System
+          </p>
         </div>
-        <div
-          className={`${this.state.displayHover ? "show" : "hide"}`}
-        >
+        <div className={`${this.state.displayHover ? "show" : "hide"}`}>
           <div className="hover-background padding-35-35-all">
-            <p className="padding-10-10">Desktop Computer</p>
+            <p className="padding-10-10">{this.state.tag}</p>
             <p className="padding-10-10">
-              Grids help websites adapt to different screen sizes. Checkout the
-              horizontal lines. See how they change for different screens.
-              asdfasdfasdfasdfasdfasdfasdf
+              Can you spot {this.state.tag}? What do those mean? In coding you
+              can make text bigger or smaller by using an h and then a number.
+              h1 are the largest, and h5 is really small!
             </p>
-            <p className="padding-10-10">Phone</p>
-            <p className="padding-10-10">
-              Mobile devices are often constrained by display size and require a
-              different approach to how content is laid out on screen.
-            </p>
+            <p className="padding-10-10">Can you spot other text styles?</p>
           </div>
         </div>
       </>

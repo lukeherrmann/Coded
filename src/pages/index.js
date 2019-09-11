@@ -21,6 +21,8 @@ import Fuze from "../images/fuze.png"
 import Stars from "../images/Stars.png"
 import Bees from "../images/bees.png"
 import firstStar from "../images/firstStar.png"
+import webGrid from "../images/webGrid.png"
+import mobileGrid from "../images/mobileGrid.png"
 
 class Index extends React.Component {
   render() {
@@ -117,7 +119,6 @@ class Index extends React.Component {
 
         <img src={home1} className="photo-1" alt="header-home" />
 
-
         <div className="container show-mobile-lg">
           <div className="row">
             <div className="col-xxs-12">
@@ -194,17 +195,25 @@ class Index extends React.Component {
                         <div className="hide-hover">
                           <div className="hover-background padding-35-35-all">
                             <p className="padding-10-10">Desktop Computer</p>
+                            <img src={webGrid} className="grid" alt="web-grid" />
                             <p className="padding-10-10">
                               Grids help websites adapt to different screen
                               sizes. Checkout the horizontal lines. See how they
                               change for different screens.
                             </p>
-                            <p className="padding-10-10">Phone</p>
-                            <p className="padding-10-10">
-                              Mobile devices are often constrained by display
-                              size and require a different approach to how
-                              content is laid out on screen.
-                            </p>
+                            <div className="row middle-xxs">
+                              <div className="col-xxs-4">
+                                <img src={mobileGrid} className="grid" alt="mobile-grid" />
+                              </div>
+                              <div className="col-xxs-8">
+                                <p className="padding-10-10">Phone</p>
+                                <p className="padding-10-10">
+                                  Mobile devices are often constrained by
+                                  display size and require a different approach
+                                  to how content is laid out on screen.
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
