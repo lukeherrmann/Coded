@@ -48,7 +48,7 @@ class FirstHoverDropdown extends React.Component {
               <div className="col-xxs-3 col-xs-offset-1 col-xs-2 col-sm-offset-2">
                 <img src={mobileGrid} alt="mobile-grid" />
               </div>
-              <div className="col-xxs-7">
+              <div className="col-xxs-offset-1 col-xxs-7 col-xs-6 col-sm-5">
                 <p className="padding-10-10">Phone</p>
                 <p className="padding-10-10">
                   Mobile devices are often constrained by display size and
