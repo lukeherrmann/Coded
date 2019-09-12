@@ -4,14 +4,14 @@ const Forms = () => (
   <div>
     <form
       id="parent-signup"
-      name="parent-signup"
+      name="contact"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       className="signup-forms"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="parent-contact" />
       <div className="padding-20-20">
         <input
           className="form-underline"
