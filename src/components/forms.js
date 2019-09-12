@@ -1,10 +1,13 @@
 import React from "react"
+import webIcon from "../images/webGrey.png"
+import appIcon from "../images/appGrey.png"
+import vrIcon from "../images/vrGrey.png"
 
 const Forms = () => (
   <div>
     <form
       id="parent-signup"
-      name="contact"
+      name="parent-signup"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
@@ -12,6 +15,47 @@ const Forms = () => (
     >
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
+      <div className="row padding-20-20">
+        <div className="col-xxs-offset-2 col-xxs-2 col-md-offset-2">
+          <label>
+            <div className="center-items">
+              <div className="padding-bottom-5">
+                <img src={webIcon} alt="web-icon" />
+              </div>
+              <p className="p-black">Web</p>
+              <div className="padding-15-15">
+                <input type="radio" name="campType" value="web" />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div className="col-xxs-offset-1 col-xxs-2">
+          <label>
+            <div className="center-items">
+              <div className="padding-bottom-5">
+                <img src={appIcon} alt="app-icon" />
+              </div>
+              <p className="p-black">App</p>
+              <div className="padding-15-15">
+                <input type="radio" name="campType" value="app" />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div className="col-xxs-offset-1 col-xxs-2">
+          <label>
+            <div className="center-items">
+              <div className="padding-bottom-5">
+                <img src={vrIcon} alt="vr-icon" />
+              </div>
+              <p className="p-black">VR</p>
+              <div className="padding-15-15">
+                <input type="radio" name="campType" value="vr" />
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
       <div className="padding-20-20">
         <input
           className="form-underline"

@@ -53,9 +53,6 @@ class SignUp extends React.Component {
                 <p className="p-black padding-20-20">
                   Select Camp of Interest
                 </p>
-                <div className="padding-20-20">
-                  <IconRadio />
-                </div>
                 {this.state.parent ? <Forms /> : <BusinessForms />}
               </div>
               <div className="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-4 radio-icons">
