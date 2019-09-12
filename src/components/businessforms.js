@@ -13,7 +13,7 @@ const BusinessForms = () => (
       data-netlify-honeypot="bot-field"
       className="signup-forms"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contact-business" />
       <input type="hidden" name="bot-field" />
       <div className="row padding-20-20">
         <div className="col-xxs-offset-2 col-xxs-2 col-md-offset-2">
@@ -67,7 +67,7 @@ const BusinessForms = () => (
       <div className="padding-20-20">
         <input
           className="form-underline"
-          name="numberOfCampers"
+          name="Campers"
           placeholder="Approximate Amount Of Campers"
           type="text"
         />

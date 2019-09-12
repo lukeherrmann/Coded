@@ -66,7 +66,7 @@ const Footer = () => (
                 data-netlify-honeypot="bot-field"
                 className="signup-forms"
               >
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="contact-footer" />
                 <input type="hidden" name="bot-field" />
                 <div className="row bottom-xs">
                   <div className="col-xxs-12 col-sm-8">
@@ -98,7 +98,7 @@ const Footer = () => (
             data-netlify-honeypot="bot-field"
             className="signup-forms"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact-footer" />
             <input type="hidden" name="bot-field" />
             <div className="row show-mobile padding-20-20">
               <div className="col-xxs-offset-1 col-xxs-10 col-xs-offset-2 col-xs-8">
