@@ -6,14 +6,14 @@ import vrIcon from "../images/vrGrey.png"
 const BusinessForms = () => (
   <div>
     <form
-      id="contact"
-      name="contact"
+      id="business"
+      name="business"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       className="signup-forms"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="business" />
       <input type="hidden" name="bot-field" />
       <div className="row padding-20-20">
         <div className="col-xxs-offset-2 col-xxs-2 col-md-offset-2">
@@ -105,7 +105,7 @@ const BusinessForms = () => (
         />
       </div>
       <div className="padding-35-35">
-        <button type="submit" form="contact" className="btn-blue-sm">
+        <button type="submit" form="business" className="btn-blue-sm">
           <div className="btn-text-white">
             <h5>Sign Up</h5>
           </div>
