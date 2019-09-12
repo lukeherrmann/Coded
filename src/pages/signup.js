@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import IconRadio from "../components/iconradio"
 import Forms from "../components/forms"
 import BusinessForms from "../components/businessforms"
 import Layout from "../components/layout"
@@ -49,11 +48,13 @@ class SignUp extends React.Component {
                     </p>
                   </div>
                 </div>
-
-                <p className="p-black padding-20-20">
-                  Select Camp of Interest
-                </p>
-                {this.state.parent ? <Forms /> : <BusinessForms />}
+                <p className="p-black padding-20-20">Select Camp of Interest</p>
+                <div className={`${this.state.parent ? "hide" : "show-form"}`}>
+                  <Forms />
+                </div>
+                <div className={`${this.state.parent ? "show-form" : "hide"}`}>
+                  <BusinessForms />
+                </div>
               </div>
               <div className="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-4 radio-icons">
                 <div className="padding-top-top">
