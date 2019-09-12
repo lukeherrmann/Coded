@@ -17,12 +17,12 @@ class SecondHoverDropdown extends React.Component {
               this.state.displayHover ? "hover-font-move" : ""
             } hover-font-mobile`}
           >
-            Grid System
+            Text Styles
           </p>
         </div>
         <div className={`${this.state.displayHover ? "show" : "hide"}`}>
           <div className="hover-background padding-35-35-all">
-            <p className="padding-10-10">{this.state.tag}</p>
+            <p className="padding-10-10 hover-title-font">{this.state.tag}</p>
             <p className="padding-10-10">
               Can you spot {this.state.tag}? What do those mean? In coding you
               can make text bigger or smaller by using an h and then a number.

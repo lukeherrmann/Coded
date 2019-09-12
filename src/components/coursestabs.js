@@ -1,8 +1,11 @@
 import React from "react"
 
 import webGrey from "../images/webGrey.png"
+import web from "../images/web.png"
 import appGrey from "../images/appGrey.png"
+import app from "../images/app.png"
 import vrGrey from "../images/vrGrey.png"
+import vr from "../images/vr.png"
 
 import CourseTab from "./coursetab"
 
@@ -10,14 +13,14 @@ class CoursesTabs extends React.Component {
   state = {
     activeTab: "",
     coursesTabs: [
-      { tabTitle: "Web", tabImg: webGrey },
-      { tabTitle: "App", tabImg: appGrey },
-      { tabTitle: "VR", tabImg: vrGrey },
+      { tabTitle: "Web", tabImg: webGrey, tabIcon: web },
+      { tabTitle: "App", tabImg: appGrey, tabIcon: app },
+      { tabTitle: "VR", tabImg: vrGrey, tabIcon: vr },
     ],
   }
 
   componentDidMount() {
-    this.setState({ activeTab: this.state.coursesTabs[0] })
+    this.setState({ activeTab: this.state.coursesTabs[0].tabTitle })
   }
 
   onClickTabItem = tab => {
@@ -37,6 +40,7 @@ class CoursesTabs extends React.Component {
                   key={tab.tabTitle}
                   tab={tab.tabTitle}
                   img={tab.tabImg}
+                  imgIcon={tab.tabIcon}
                   onClick={this.onClickTabItem}
                 />
               </div>

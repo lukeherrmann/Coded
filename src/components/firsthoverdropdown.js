@@ -27,7 +27,7 @@ class FirstHoverDropdown extends React.Component {
           <div className="hover-background padding-35-35-all">
             <div className="row">
               <div className="col-xxs-11 col-xs-offset-1 col-sm-offset-2">
-                <p className="padding-20-20">Desktop Computer</p>
+                <p className="padding-20-20 hover-title-font">Desktop Computer</p>
               </div>
             </div>
             <div className="row web-grid-mobile padding-20-20">
@@ -49,7 +49,7 @@ class FirstHoverDropdown extends React.Component {
                 <img src={mobileGrid} alt="mobile-grid" />
               </div>
               <div className="col-xxs-offset-1 col-xxs-7 col-xs-6 col-sm-5">
-                <p className="padding-10-10">Phone</p>
+                <p className="padding-10-10 hover-title-font">Phone</p>
                 <p className="padding-10-10">
                   Mobile devices are often constrained by display size and
                   require a different approach to how content is laid out on

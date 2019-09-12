@@ -25,6 +25,7 @@ import webGrid from "../images/webGrid.png"
 import mobileGrid from "../images/mobileGrid.png"
 
 class Index extends React.Component {
+  state = { tag: "<h1>" }
   render() {
     const {
       data: {
@@ -194,8 +195,14 @@ class Index extends React.Component {
                         </div>
                         <div className="hide-hover">
                           <div className="hover-background padding-35-35-all">
-                            <p className="padding-10-10">Desktop Computer</p>
-                            <img src={webGrid} className="grid" alt="web-grid" />
+                            <h4 className="padding-10-10 hover-title-font">
+                              Desktop Computer
+                            </h4>
+                            <img
+                              src={webGrid}
+                              className="grid"
+                              alt="web-grid"
+                            />
                             <p className="padding-10-10">
                               Grids help websites adapt to different screen
                               sizes. Checkout the horizontal lines. See how they
@@ -203,10 +210,16 @@ class Index extends React.Component {
                             </p>
                             <div className="row middle-xxs">
                               <div className="col-xxs-4">
-                                <img src={mobileGrid} className="grid" alt="mobile-grid" />
+                                <img
+                                  src={mobileGrid}
+                                  className="grid"
+                                  alt="mobile-grid"
+                                />
                               </div>
                               <div className="col-xxs-8">
-                                <p className="padding-10-10">Phone</p>
+                                <p className="padding-10-10 hover-title-font">
+                                  Phone
+                                </p>
                                 <p className="padding-10-10">
                                   Mobile devices are often constrained by
                                   display size and require a different approach
@@ -282,21 +295,19 @@ class Index extends React.Component {
                       <div className="col-xs-12">
                         <div className="hover-title show-hover">
                           <div className="hover-dot" />
-                          <p className="hover-font">Grid System</p>
+                          <p className="hover-font">Text Styles</p>
                         </div>
                         <div className="hide-hover">
                           <div className="hover-background padding-35-35-all">
-                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10 hover-title-font">{this.state.tag}</p>
                             <p className="padding-10-10">
-                              Grids help websites adapt to different screen
-                              sizes. Checkout the horizontal lines. See how they
-                              change for different screens.
+                              Can you spot {this.state.tag}? What do those mean?
+                              In coding you can make text bigger or smaller by
+                              using an h and then a number. h1 are the largest,
+                              and h5 is really small!
                             </p>
-                            <p className="padding-10-10">Phone</p>
                             <p className="padding-10-10">
-                              Mobile devices are often constrained by display
-                              size and require a different approach to how
-                              content is laid out on screen.
+                              Can you spot other text styles?
                             </p>
                           </div>
                         </div>
@@ -404,21 +415,19 @@ class Index extends React.Component {
                       <div className="col-xs-12">
                         <div className="hover-title show-hover">
                           <div className="hover-dot" />
-                          <p className="hover-font">Grid System</p>
+                          <p className="hover-font">Hover State</p>
                         </div>
                         <div className="hide-hover">
                           <div className="hover-background padding-35-35-all">
-                            <p className="padding-10-10">Desktop Computer</p>
+                            <p className="padding-10-10 hover-title-font">{this.state.tag}</p>
                             <p className="padding-10-10">
-                              Grids help websites adapt to different screen
-                              sizes. Checkout the horizontal lines. See how they
-                              change for different screens.
+                              Can you spot {this.state.tag}? What do those mean?
+                              In coding you can make text bigger or smaller by
+                              using an h and then a number. h1 are the largest,
+                              and h5 is really small!
                             </p>
-                            <p className="padding-10-10">Phone</p>
                             <p className="padding-10-10">
-                              Mobile devices are often constrained by display
-                              size and require a different approach to how
-                              content is laid out on screen.
+                              Can you spot other text styles?
                             </p>
                           </div>
                         </div>

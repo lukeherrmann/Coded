@@ -1,24 +1,6 @@
 import React from "react"
 
 class Forms extends React.Component {
-  state = {
-    name: "",
-    number: "",
-    email: "",
-    location: "",
-    selectedOption: "",
-  }
-
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-  handleRadio = event => {
-    this.setState({ selectedOption: event.target.value })
-  }
-
-  handleSubmit = e => {
-    e.preventDefault()
-  }
   render() {
     return (
       <div>
@@ -32,14 +14,13 @@ class Forms extends React.Component {
           onSubmit={this.handleSubmit}
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="parent-contact" />
           <div className="padding-20-20">
             <input
               className="form-underline"
               name="name"
               placeholder="Name"
-              value={this.state.name}
-              onChange={this.handleChange}
+              type="text"
             />
           </div>
           <div className="padding-20-20">
@@ -47,8 +28,7 @@ class Forms extends React.Component {
               className="form-underline"
               name="number"
               placeholder="Phone Number"
-              value={this.state.number}
-              onChange={this.handleChange}
+              type="text"
             />
           </div>
           <div className="padding-20-20">
@@ -56,8 +36,7 @@ class Forms extends React.Component {
               className="form-underline"
               name="email"
               placeholder="Email"
-              value={this.state.email}
-              onChange={this.handleChange}
+              type="text"
             />
           </div>
           <div className="padding-20-20">
@@ -65,21 +44,14 @@ class Forms extends React.Component {
               className="form-underline"
               name="location"
               placeholder="Location"
-              value={this.state.location}
-              onChange={this.handleChange}
+              type="text"
             />
           </div>
           <div className="padding-20-20">
             <div className="row">
               <div className="col-xs-6">
                 <label className="forms-radio">
-                  <input
-                    type="radio"
-                    name="programLength"
-                    value="month"
-                    checked={this.state.selectedOption === "month"}
-                    onChange={this.handleRadio}
-                  />
+                  <input type="radio" name="programLength" value="month" />
                   <p className="p-black padding-left">
                     Month Program - $999.00
                   </p>
@@ -87,13 +59,7 @@ class Forms extends React.Component {
               </div>
               <div className="col-xs-6">
                 <label className="forms-radio">
-                  <input
-                    type="radio"
-                    name="programLength"
-                    value="week"
-                    checked={this.state.selectedOption === "week"}
-                    onChange={this.handleRadio}
-                  />
+                  <input type="radio" name="programLength" value="week" />
                   <p className="p-black padding-left">Week Program - $299.00</p>
                 </label>
               </div>
