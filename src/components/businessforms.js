@@ -6,7 +6,6 @@ import vrIcon from "../images/vrGrey.png"
 const BusinessForms = () => (
   <div>
     <form
-      id="business"
       name="business"
       method="post"
       data-netlify="true"
@@ -24,7 +23,7 @@ const BusinessForms = () => (
               </div>
               <p className="p-black">Web</p>
               <div className="padding-15-15">
-                <input type="radio" name="campType" value="web" />
+                <input type="radio" name="campTypeBusiness" value="web" />
               </div>
             </div>
           </label>
@@ -37,7 +36,7 @@ const BusinessForms = () => (
               </div>
               <p className="p-black">App</p>
               <div className="padding-15-15">
-                <input type="radio" name="campType" value="app" />
+                <input type="radio" name="campTypeBusiness" value="app" />
               </div>
             </div>
           </label>
@@ -50,7 +49,7 @@ const BusinessForms = () => (
               </div>
               <p className="p-black">VR</p>
               <div className="padding-15-15">
-                <input type="radio" name="campType" value="vr" />
+                <input type="radio" name="campTypeBusiness" value="vr" />
               </div>
             </div>
           </label>
@@ -59,7 +58,7 @@ const BusinessForms = () => (
       <div className="padding-20-20">
         <input
           className="form-underline"
-          name="business"
+          name="businessName"
           placeholder="Business"
           type="text"
         />
@@ -75,7 +74,7 @@ const BusinessForms = () => (
       <div className="padding-20-20">
         <input
           className="form-underline"
-          name="name"
+          name="NameofPerson"
           placeholder="Name"
           type="text"
         />
@@ -83,7 +82,7 @@ const BusinessForms = () => (
       <div className="padding-20-20">
         <input
           className="form-underline"
-          name="number"
+          name="businessNumber"
           placeholder="Phone Number"
           type="text"
         />
@@ -91,7 +90,7 @@ const BusinessForms = () => (
       <div className="padding-20-20">
         <input
           className="form-underline"
-          name="email"
+          name="businessEmail"
           placeholder="Email"
           type="text"
         />
@@ -99,13 +98,13 @@ const BusinessForms = () => (
       <div className="padding-20-20">
         <input
           className="form-underline"
-          name="location"
+          name="businessLocation"
           placeholder="Location"
           type="text"
         />
       </div>
       <div className="padding-35-35">
-        <button type="submit" form="business" className="btn-blue-sm">
+        <button type="submit" className="btn-blue-sm">
           <div className="btn-text-white">
             <h5>Sign Up</h5>
           </div>

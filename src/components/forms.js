@@ -6,14 +6,13 @@ import vrIcon from "../images/vrGrey.png"
 const Forms = () => (
   <div>
     <form
-      id="signup-parent"
-      name="signup-parent"
+      name="parent"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       className="signup-forms"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="parent" />
       <input type="hidden" name="bot-field" />
       <div className="row padding-20-20">
         <div className="col-xxs-offset-2 col-xxs-2 col-md-offset-2">
@@ -108,7 +107,7 @@ const Forms = () => (
       <p className="i-black padding-35-35">
         Payment is not taken here. This is just for contact.
       </p>
-      <button type="submit" form="signup-parent" className="btn-blue-sm">
+      <button type="submit" className="btn-blue-sm">
         <div className="btn-text-white">
           <h5>Sign Up</h5>
         </div>
