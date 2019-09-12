@@ -58,7 +58,7 @@ const Forms = () => (
       <div className="padding-20-20">
         <input
           className="form-underline"
-          name="name"
+          name="parentFullName"
           placeholder="Name"
           type="text"
         />
