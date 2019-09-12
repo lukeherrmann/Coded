@@ -6,8 +6,8 @@ import vrIcon from "../images/vrGrey.png"
 const BusinessForms = () => (
   <div>
     <form
-      id="Contact Business"
-      name="Contact Business"
+      id="contact"
+      name="contact"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
@@ -105,7 +105,7 @@ const BusinessForms = () => (
         />
       </div>
       <div className="padding-35-35">
-        <button type="submit" form="Contact Business" className="btn-blue-sm">
+        <button type="submit" form="contact" className="btn-blue-sm">
           <div className="btn-text-white">
             <h5>Sign Up</h5>
           </div>
