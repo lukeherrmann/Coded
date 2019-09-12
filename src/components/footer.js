@@ -59,8 +59,8 @@ const Footer = () => (
             </div>
             <div className="col-xxs-12 col-sm-offset-2 col-sm-6">
               <form
-                id="subscribe-footer"
-                name="subscribe-footer"
+                id="footer-subscribe"
+                name="footer-subscribe"
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
@@ -80,7 +80,7 @@ const Footer = () => (
                   <div className="footer-button col-xxs-12 col-sm-4">
                     <button
                       type="submit"
-                      form="subcribe-footer"
+                      form="footer-subscribe"
                       className="btn-med-white"
                     >
                       <div className="btn-text-blue-sm">Subscribe</div>
@@ -91,8 +91,8 @@ const Footer = () => (
             </div>
           </div>
           <form
-            id="subscribe-footer"
-            name="subscribe-footer"
+            id="footer-subscribe"
+            name="footer-subscribe"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -114,7 +114,7 @@ const Footer = () => (
               <div className="col-xxs-offset-2 col-xxs-8 footer-button">
                 <button
                   type="submit"
-                  form="subcribe-footer"
+                  form="footer-subscribe"
                   className="btn-med-white"
                 >
                   <div className="btn-text-blue-sm">Subscribe</div>

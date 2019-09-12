@@ -6,8 +6,8 @@ import vrIcon from "../images/vrGrey.png"
 const Forms = () => (
   <div>
     <form
-      id="parent-signup"
-      name="parent-signup"
+      id="signup-parent"
+      name="signup-parent"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
@@ -108,7 +108,7 @@ const Forms = () => (
       <p className="i-black padding-35-35">
         Payment is not taken here. This is just for contact.
       </p>
-      <button type="submit" form="parent-signup" className="btn-blue-sm">
+      <button type="submit" form="signup-parent" className="btn-blue-sm">
         <div className="btn-text-white">
           <h5>Sign Up</h5>
         </div>
