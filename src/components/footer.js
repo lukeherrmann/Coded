@@ -78,7 +78,11 @@ const Footer = () => (
                     />
                   </div>
                   <div className="footer-button col-xxs-12 col-sm-4">
-                    <button className="btn-med-white">
+                    <button
+                      type="submit"
+                      form="subcribe-footer"
+                      className="btn-med-white"
+                    >
                       <div className="btn-text-blue-sm">Subscribe</div>
                     </button>
                   </div>
@@ -108,7 +112,11 @@ const Footer = () => (
             </div>
             <div className="row show-mobile padding-20-20">
               <div className="col-xxs-offset-2 col-xxs-8 footer-button">
-                <button className="btn-med-white">
+                <button
+                  type="submit"
+                  form="subcribe-footer"
+                  className="btn-med-white"
+                >
                   <div className="btn-text-blue-sm">Subscribe</div>
                 </button>
               </div>
