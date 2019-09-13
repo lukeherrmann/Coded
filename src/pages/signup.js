@@ -3,13 +3,34 @@ import { graphql } from "gatsby"
 import Forms from "../components/forms"
 import BusinessForms from "../components/businessforms"
 import Layout from "../components/layout"
+
 import webIcon from "../images/web.png"
 import appIcon from "../images/app.png"
 import vrIcon from "../images/vr.png"
+
+import webGrey from "../images/webGrey.png"
+import web from "../images/webGreen.png"
+import appGrey from "../images/appGrey.png"
+import app from "../images/appGreen.png"
+import vrGrey from "../images/vrGrey.png"
+import vr from "../images/vrGreen.png"
+
 import "../styles/main.sass"
 
 class SignUp extends React.Component {
-  state = { parent: true }
+  state = {
+    parent: true,
+    activeTab: "",
+    coursesTabs: [
+      { tabTitle: "Web", tabImg: webGrey, tabIcon: web },
+      { tabTitle: "App", tabImg: appGrey, tabIcon: app },
+      { tabTitle: "VR", tabImg: vrGrey, tabIcon: vr },
+    ],
+  }
+
+  onClickTabItem = tab => {
+    this.setState({ activeTab: tab })
+  }
 
   handleClick = () => {
     if (this.state.parent === true) this.setState({ parent: false })
@@ -31,6 +52,7 @@ class SignUp extends React.Component {
         },
       },
     } = this.props
+
     return (
       <Layout>
         <div className="sign-up">
@@ -42,17 +64,20 @@ class SignUp extends React.Component {
                     Sign Up - {this.state.parent ? "Parent" : "Business"}
                   </h1>
                   <div className="padding-top-15">
-                    <p onClick={this.handleClick} className="i-black">
+                    <p onClick={this.handleClick} className="i-blue">
                       Not a {this.state.parent ? "Parent" : "Business"}? Click
                       Here!
                     </p>
                   </div>
                 </div>
                 <p className="p-black padding-20-20">Select Camp of Interest</p>
-                <div className={`${this.state.parent ? "hide" : "show-form"}`}>
-                  <Forms />
-                </div>
                 <div className={`${this.state.parent ? "show-form" : "hide"}`}>
+                  <Forms
+                    tab={this.state.activeTab}
+                    onClick={this.onClickTabItem}
+                  />
+                </div>
+                <div className={`${this.state.parent ? "hide" : "show-form"}`}>
                   <BusinessForms />
                 </div>
               </div>

@@ -22,9 +22,7 @@ class CourseTab extends React.Component {
       className += " tab-item-active"
        icon = imgIcon
     }
-    else {
-
-    }
+    
     return (
       <div className={className} onClick={onClick}>
         <img src={icon} className="tab-img" alt="course-icon" />

@@ -469,9 +469,11 @@
 .padding-top-top
   padding-top: 65px
 
-.i-black
+.i-blue
+  color: #2A8BBF
   font-style: italic
-  font-size: .75rem
+  font-size: 1rem
+  cursor: pointer
 
 .aboutus-image-header
   position: relative
@@ -678,7 +680,7 @@
 
 .tab-item-active 
   color: #37cbc1
-  font-size: 1.5rem
+  font-size: 1rem
   font-weight: bold
   margin-left: 0rem
   // -webkit-filter: hue-rotate(90deg) !important
@@ -695,9 +697,10 @@
     padding-top: 4rem
 
 .fixed
-  position: fixed
-  z-index: 99
-  width: 100%
+  +below($md)
+    position: fixed
+    z-index: 99
+    width: 100%
 
 .header-quote-font
   color: #fffbfa
@@ -708,3 +711,29 @@
   color: #fffbfa
   opacity: .4
   font-size: 1.5rem
+
+input[type='radio']:after 
+  width: 1.2rem
+  height: 1.2rem
+  top: -2px
+  left: -1px
+  position: relative
+  background-color: #d1d3d1
+  content: ''
+  display: inline-block
+  visibility: visible
+  border: 2px solid white
+    
+
+input[type='radio']:checked:after 
+  width: 1.2rem
+  height: 1.2rem
+  top: -2px
+  left: -1px
+  position: relative
+  background-color: #37cbc1
+  content: ''
+  display: inline-block
+  visibility: visible
+  border: 2px solid white
+  

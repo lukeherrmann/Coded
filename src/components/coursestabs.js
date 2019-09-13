@@ -1,11 +1,11 @@
 import React from "react"
 
 import webGrey from "../images/webGrey.png"
-import web from "../images/web.png"
+import web from "../images/webGreen.png"
 import appGrey from "../images/appGrey.png"
-import app from "../images/app.png"
+import app from "../images/appGreen.png"
 import vrGrey from "../images/vrGrey.png"
-import vr from "../images/vr.png"
+import vr from "../images/vrGreen.png"
 
 import CourseTab from "./coursetab"
 
