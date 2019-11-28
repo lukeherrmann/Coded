@@ -24,8 +24,12 @@ import firstStar from "../images/firstStar.png"
 import webGrid from "../images/webGrid.png"
 import mobileGrid from "../images/mobileGrid.png"
 
+
 class Index extends React.Component {
-  state = { tag: "<h1>" }
+  state = { img: "", tag: "<h1>" }
+
+
+
   render() {
     const {
       data: {
