@@ -24,11 +24,8 @@ import firstStar from "../images/firstStar.png"
 import webGrid from "../images/webGrid.png"
 import mobileGrid from "../images/mobileGrid.png"
 
-
 class Index extends React.Component {
   state = { img: "", tag: "<h1>" }
-
-
 
   render() {
     const {
@@ -64,25 +61,13 @@ class Index extends React.Component {
     return (
       <Layout>
         <div className="gradient-sq-top">
-          <div className="container">
-            <div className="row">
-              <div className="col-xxs-3 col-xs-3">
-                <div className="line-white" />
-              </div>
-              <div className="col-xxs-3 col-xs-3">
-                <div className="line-white" />
-              </div>
-              <div className="col-xxs-3 col-xs-3">
-                <div className="line-white" />
-              </div>
-              <div className="col-xxs-3 col-xs-3">
-                <div className="line-white" />
-              </div>
-              <div className="row end-xs">
-                <div className="col-xxs-12 col-xs-12">
-                  <div className="line-white" />
-                </div>
-              </div>
+          <div className="lines-home">
+            <div className="container">
+              <div className="line-white" id="body-lines" />
+              <div className="line-white" id="body-lines" />
+              <div className="line-white" id="body-lines" />
+              <div className="line-white" id="body-lines" />
+              <div className="line-white" id="body-lines" />
             </div>
           </div>
           <div className="container">
@@ -303,7 +288,9 @@ class Index extends React.Component {
                         </div>
                         <div className="hide-hover">
                           <div className="hover-background padding-35-35-all">
-                            <p className="padding-10-10 hover-title-font">{this.state.tag}</p>
+                            <p className="padding-10-10 hover-title-font">
+                              {this.state.tag}
+                            </p>
                             <p className="padding-10-10">
                               Can you spot {this.state.tag}? What do those mean?
                               In coding you can make text bigger or smaller by
@@ -423,7 +410,9 @@ class Index extends React.Component {
                         </div>
                         <div className="hide-hover">
                           <div className="hover-background padding-35-35-all">
-                            <p className="padding-10-10 hover-title-font">{this.state.tag}</p>
+                            <p className="padding-10-10 hover-title-font">
+                              {this.state.tag}
+                            </p>
                             <p className="padding-10-10">
                               Can you spot {this.state.tag}? What do those mean?
                               In coding you can make text bigger or smaller by
