@@ -5,7 +5,7 @@ class WeeksTitle extends React.Component {
     return (
       <>
         <div className="padding-top-30" />
-        <p className="p-black">Week</p>
+        <p className="p-black">Phase</p>
         <h1 className="header-xl-black-courses">{this.props.week_number}</h1>
       </>
     )

@@ -462,7 +462,7 @@ class Index extends React.Component {
               </div>
               <div className="row">
                 <div className="col-xxs-12 center-items">
-                  <p className="p-black">Are you a Parent or a Business?</p>
+                  <p className="p-black">Are you a Parent or an Educator?</p>
                 </div>
               </div>
               <div className="padding-50-50">
@@ -489,8 +489,8 @@ class Index extends React.Component {
                     >
                       <div className="box-shadow">
                         <div className="box-shadow-text">
-                          <p className="p-box padding-15-15">I have a</p>
-                          <h2 className="header-lg-black">Business</h2>
+                          <p className="p-box padding-15-15">I'm an</p>
+                          <h2 className="header-lg-black">Educator</h2>
                         </div>
                       </div>
                     </Link>
