@@ -23,7 +23,6 @@ class FaqSections extends React.Component {
           <div className="row bottom-xxs tabs">
             {this.props.data.map((section, index) => {
               const label = section.data.section_title.text
-              debugger
               return (
                 <div className="col-xxs-3 col-sm-2 col-md-1">
                   <FaqTitle
