@@ -25,7 +25,7 @@ class Header extends React.Component {
               </div>
               <div className="header-item col-md-offset-3 col-md-3">
                 <Link className="link" to="/courses/">
-                  <p className="header-font">Learn About Our Courses</p>
+                  <p className="header-font">Courses</p>
                 </Link>
               </div>
               <div className="header-item col-md-1">
