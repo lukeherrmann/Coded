@@ -61,11 +61,11 @@ class SignUp extends React.Component {
               <div className="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-5">
                 <div className="padding-50-50">
                   <h1 className="header-lg-black">
-                    Sign Up - {this.state.parent ? "Parent" : "Business"}
+                    Sign Up - {this.state.parent ? "Parent" : "Educator"}
                   </h1>
                   <div className="padding-top-15">
                     <p onClick={this.handleClick} className="i-blue">
-                      Not a {this.state.parent ? "Parent" : "Business"}? Click
+                      Not a {this.state.parent ? "Parent" : "Educator"}? Click
                       Here!
                     </p>
                   </div>
