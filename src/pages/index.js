@@ -432,17 +432,43 @@ class Index extends React.Component {
                   <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
                     <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_1.text}"</p>
+                      <p className="p-black padding-20-20 show-mobile">
+                        Luke Herrmann
+                      </p>
                     </div>
                   </div>
                   <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
                     <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_2.text}"</p>
+                      <p className="p-black padding-20-20 show-mobile">
+                        Luke Herrmann
+                      </p>
                     </div>
                   </div>
                   <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
                     <div className="body-text-spacing">
                       <p className="p-black">"{testimonial_3.text}"</p>
+                      <p className="p-black padding-20-20 show-mobile">
+                        Luke Herrmann
+                      </p>
                     </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
+                    <p className="p-black padding-20-20 hide-mobile">
+                      Luke Herrmann
+                    </p>
+                  </div>
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
+                    <p className="p-black padding-20-20 hide-mobile">
+                      Luke Herrmann
+                    </p>
+                  </div>
+                  <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-3">
+                    <p className="p-black padding-20-20 hide-mobile">
+                      Luke Herrmann
+                    </p>
                   </div>
                 </div>
               </div>
