@@ -29,9 +29,12 @@ class Header extends React.Component {
                 </Link>
               </div>
               <div className="header-item col-sm-2 col-lg-offset-0 col-lg-2">
-                <Link className="link" to="/courses/">
+                <a
+                  href="https://groupmatics.events/event/Codedschoolfundraiser"
+                  target="_blank"
+                >
                   <p className="header-font">STEM Night</p>
-                </Link>
+                </a>
               </div>
               <div className="header-item col-sm-2 col-lg-1">
                 <Link className="link" to="/aboutus/">
@@ -60,7 +63,10 @@ class Header extends React.Component {
                 <Link to="/courses/">
                   <h1 className="header-lg-blue show-dropdown">Our Courses</h1>
                 </Link>
-                <a href="https://groupmatics.events/event/Codedschoolfundraiser"  target="_blank">
+                <a
+                  href="https://groupmatics.events/event/Codedschoolfundraiser"
+                  target="_blank"
+                >
                   <h1 className="header-lg-blue show-dropdown">STEM Night</h1>
                 </a>
                 <Link to="/aboutus/">
@@ -76,8 +82,14 @@ class Header extends React.Component {
           >
             <div className="row top-xxs show-dropdown">
               <div className="col-xxs-offset-1 col-xxs-10 padding-35-35 show-dropdown">
-                <p className="header-quote-font">"The most disastrous thing that you can ever learn is your first programing languages"</p>
-                <p className="header-quote-font-sm padding-20-20"> - Alan Kay</p>
+                <p className="header-quote-font">
+                  "The most disastrous thing that you can ever learn is your
+                  first programing languages"
+                </p>
+                <p className="header-quote-font-sm padding-20-20">
+                  {" "}
+                  - Alan Kay
+                </p>
               </div>
             </div>
           </div>
