@@ -18,17 +18,22 @@ class Header extends React.Component {
         <div className="header-container">
           <div className="container">
             <div className="row middle-sm">
-              <div className="col-xxs-8 col-xs-8 col-sm-5">
+              <div className="col-xxs-8 col-xs-8 col-sm-4 col-lg-7">
                 <Link to="/">
                   <img src={codedLogo} alt="header-logo" />
                 </Link>
               </div>
-              <div className="header-item col-md-offset-3 col-md-3">
+              <div className="header-item col-md-offset-2 col-sm-2 col-lg-offset-0 col-lg-2">
                 <Link className="link" to="/courses/">
                   <p className="header-font">Courses</p>
                 </Link>
               </div>
-              <div className="header-item col-md-1">
+              <div className="header-item col-sm-2 col-lg-offset-0 col-lg-2">
+                <Link className="link" to="/courses/">
+                  <p className="header-font">STEM Night</p>
+                </Link>
+              </div>
+              <div className="header-item col-sm-2 col-lg-1">
                 <Link className="link" to="/aboutus/">
                   <p className="header-font">About Us</p>
                 </Link>
@@ -55,6 +60,9 @@ class Header extends React.Component {
                 <Link to="/courses/">
                   <h1 className="header-lg-blue show-dropdown">Our Courses</h1>
                 </Link>
+                <a href="https://groupmatics.events/event/Codedschoolfundraiser"  target="_blank">
+                  <h1 className="header-lg-blue show-dropdown">STEM Night</h1>
+                </a>
                 <Link to="/aboutus/">
                   <h1 className="header-lg-blue show-dropdown">About Us</h1>
                 </Link>
